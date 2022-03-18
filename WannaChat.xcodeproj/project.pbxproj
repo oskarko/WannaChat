@@ -10,11 +10,13 @@
 		726AA59EC1072E3893BF4FD8 /* Pods_WannaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */; };
 		E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981527E4C669009D28B3 /* AppDelegate.swift */; };
 		E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981727E4C669009D28B3 /* SceneDelegate.swift */; };
-		E264981A27E4C669009D28B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981927E4C669009D28B3 /* ViewController.swift */; };
-		E264981D27E4C669009D28B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E264981B27E4C669009D28B3 /* Main.storyboard */; };
 		E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264981E27E4C66B009D28B3 /* Assets.xcassets */; };
 		E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */; };
 		E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E264982927E4C9C0009D28B3 /* GoogleService-Info.plist */; };
+		E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264982E27E4D17E009D28B3 /* AuthRouter.swift */; };
+		E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264982F27E4D17E009D28B3 /* AuthViewController.swift */; };
+		E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983027E4D17E009D28B3 /* AuthViewModel.swift */; };
+		E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E264983127E4D17E009D28B3 /* AuthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +26,14 @@
 		E264981227E4C669009D28B3 /* WannaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E264981527E4C669009D28B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E264981727E4C669009D28B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E264981927E4C669009D28B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E264981C27E4C669009D28B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E264981E27E4C66B009D28B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E264982127E4C66B009D28B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E264982327E4C66B009D28B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E264982927E4C9C0009D28B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E264982E27E4D17E009D28B3 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		E264982F27E4D17E009D28B3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E264983027E4D17E009D28B3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E264983127E4D17E009D28B3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,16 +77,58 @@
 		E264981427E4C669009D28B3 /* WannaChat */ = {
 			isa = PBXGroup;
 			children = (
-				E264981527E4C669009D28B3 /* AppDelegate.swift */,
-				E264981727E4C669009D28B3 /* SceneDelegate.swift */,
-				E264981927E4C669009D28B3 /* ViewController.swift */,
-				E264981B27E4C669009D28B3 /* Main.storyboard */,
-				E264981E27E4C66B009D28B3 /* Assets.xcassets */,
-				E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */,
+				E264983627E4DB99009D28B3 /* App */,
+				E264982B27E4D14F009D28B3 /* Source */,
+				E264983727E4DBA8009D28B3 /* Resource */,
 				E264982327E4C66B009D28B3 /* Info.plist */,
 				E264982927E4C9C0009D28B3 /* GoogleService-Info.plist */,
 			);
 			path = WannaChat;
+			sourceTree = "<group>";
+		};
+		E264982B27E4D14F009D28B3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E264982C27E4D155009D28B3 /* User Interface */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E264982C27E4D155009D28B3 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E264982D27E4D15D009D28B3 /* Authentication */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E264982D27E4D15D009D28B3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E264982E27E4D17E009D28B3 /* AuthRouter.swift */,
+				E264983027E4D17E009D28B3 /* AuthViewModel.swift */,
+				E264982F27E4D17E009D28B3 /* AuthViewController.swift */,
+				E264983127E4D17E009D28B3 /* AuthViewController.xib */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E264983627E4DB99009D28B3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E264981527E4C669009D28B3 /* AppDelegate.swift */,
+				E264981727E4C669009D28B3 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E264983727E4DBA8009D28B3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E264981E27E4C66B009D28B3 /* Assets.xcassets */,
+				E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		F6C83C80D2171A8BD334D1FD /* Pods */ = {
@@ -156,8 +202,8 @@
 			files = (
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
 				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
+				E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */,
 				E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */,
-				E264981D27E4C669009D28B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E264981A27E4C669009D28B3 /* ViewController.swift in Sources */,
 				E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */,
+				E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */,
+				E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */,
+				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
 				E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E264981B27E4C669009D28B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E264981C27E4C669009D28B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
