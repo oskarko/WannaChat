@@ -14,6 +14,7 @@
 		E264981D27E4C669009D28B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E264981B27E4C669009D28B3 /* Main.storyboard */; };
 		E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264981E27E4C66B009D28B3 /* Assets.xcassets */; };
 		E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */; };
+		E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E264982927E4C9C0009D28B3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E264981E27E4C66B009D28B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E264982127E4C66B009D28B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E264982327E4C66B009D28B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E264982927E4C9C0009D28B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E264981E27E4C66B009D28B3 /* Assets.xcassets */,
 				E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */,
 				E264982327E4C66B009D28B3 /* Info.plist */,
+				E264982927E4C9C0009D28B3 /* GoogleService-Info.plist */,
 			);
 			path = WannaChat;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				428D9C8BC3FE1A61C33652E0 /* Pods-WannaChat.debug.xcconfig */,
 				C306481ABB92B4E6508F5ED2 /* Pods-WannaChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
+				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
 				E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */,
 				E264981D27E4C669009D28B3 /* Main.storyboard in Resources */,
 			);
@@ -286,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -341,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -359,7 +362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KN83UD9446;
+				DEVELOPMENT_TEAM = 934NVR3K3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -388,7 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KN83UD9446;
+				DEVELOPMENT_TEAM = 934NVR3K3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
