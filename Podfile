@@ -22,5 +22,6 @@ pod 'SKPhotoBrowser'
 
 pod 'MessageKit'
 pod 'InputBarAccessoryView'
+pod 'IQKeyboardManagerSwift'
 
 end

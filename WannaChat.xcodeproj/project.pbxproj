@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		726AA59EC1072E3893BF4FD8 /* Pods_WannaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */; };
+		E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A7E27E9E22B00A1D34E /* HUDMessageType.swift */; };
+		E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8127EA075300A1D34E /* MainRouter.swift */; };
+		E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8227EA075300A1D34E /* MainViewController.swift */; };
+		E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8327EA075300A1D34E /* MainViewModel.swift */; };
+		E2441A8827EA075300A1D34E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2441A8427EA075300A1D34E /* MainViewController.xib */; };
+		E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A152C27E8567900AD4E12 /* FCollectionReference.swift */; };
+		E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */; };
 		E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981527E4C669009D28B3 /* AppDelegate.swift */; };
 		E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981727E4C669009D28B3 /* SceneDelegate.swift */; };
 		E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264981E27E4C66B009D28B3 /* Assets.xcassets */; };
@@ -17,12 +24,21 @@
 		E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264982F27E4D17E009D28B3 /* AuthViewController.swift */; };
 		E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983027E4D17E009D28B3 /* AuthViewModel.swift */; };
 		E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E264983127E4D17E009D28B3 /* AuthViewController.xib */; };
+		E264983B27E508F6009D28B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983A27E508F6009D28B3 /* User.swift */; };
+		E264983E27E50C0C009D28B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983D27E50C0C009D28B3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		428D9C8BC3FE1A61C33652E0 /* Pods-WannaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaChat.debug.xcconfig"; path = "Target Support Files/Pods-WannaChat/Pods-WannaChat.debug.xcconfig"; sourceTree = "<group>"; };
 		63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C306481ABB92B4E6508F5ED2 /* Pods-WannaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaChat.release.xcconfig"; path = "Target Support Files/Pods-WannaChat/Pods-WannaChat.release.xcconfig"; sourceTree = "<group>"; };
+		E2441A7E27E9E22B00A1D34E /* HUDMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDMessageType.swift; sourceTree = "<group>"; };
+		E2441A8127EA075300A1D34E /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		E2441A8227EA075300A1D34E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E2441A8327EA075300A1D34E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E2441A8427EA075300A1D34E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E25A152C27E8567900AD4E12 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
+		E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E264981227E4C669009D28B3 /* WannaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E264981527E4C669009D28B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E264981727E4C669009D28B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +50,8 @@
 		E264982F27E4D17E009D28B3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E264983027E4D17E009D28B3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E264983127E4D17E009D28B3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		E264983A27E508F6009D28B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E264983D27E50C0C009D28B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,34 @@
 				63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2441A7D27E9E21200A1D34E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2441A7E27E9E22B00A1D34E /* HUDMessageType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2441A8027EA073500A1D34E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E2441A8127EA075300A1D34E /* MainRouter.swift */,
+				E2441A8327EA075300A1D34E /* MainViewModel.swift */,
+				E2441A8227EA075300A1D34E /* MainViewController.swift */,
+				E2441A8427EA075300A1D34E /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E25A152E27E8572A00AD4E12 /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E25A152C27E8567900AD4E12 /* FCollectionReference.swift */,
+				E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */,
+			);
+			path = FirebaseHelpers;
 			sourceTree = "<group>";
 		};
 		E264980927E4C669009D28B3 = {
@@ -89,6 +135,8 @@
 		E264982B27E4D14F009D28B3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E264983C27E50BFD009D28B3 /* Utils */,
+				E264983827E508C1009D28B3 /* Common */,
 				E264982C27E4D155009D28B3 /* User Interface */,
 			);
 			path = Source;
@@ -97,6 +145,7 @@
 		E264982C27E4D155009D28B3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				E2441A8027EA073500A1D34E /* Main */,
 				E264982D27E4D15D009D28B3 /* Authentication */,
 			);
 			path = "User Interface";
@@ -105,6 +154,7 @@
 		E264982D27E4D15D009D28B3 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E2441A7D27E9E21200A1D34E /* Models */,
 				E264982E27E4D17E009D28B3 /* AuthRouter.swift */,
 				E264983027E4D17E009D28B3 /* AuthViewModel.swift */,
 				E264982F27E4D17E009D28B3 /* AuthViewController.swift */,
@@ -129,6 +179,31 @@
 				E264982027E4C66B009D28B3 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		E264983827E508C1009D28B3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E25A152E27E8572A00AD4E12 /* FirebaseHelpers */,
+				E264983927E508E2009D28B3 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E264983927E508E2009D28B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E264983A27E508F6009D28B3 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E264983C27E50BFD009D28B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E264983D27E50C0C009D28B3 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F6C83C80D2171A8BD334D1FD /* Pods */ = {
@@ -202,6 +277,7 @@
 			files = (
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
 				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
+				E2441A8827EA075300A1D34E /* MainViewController.xib in Resources */,
 				E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */,
 				E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */,
 			);
@@ -258,8 +334,16 @@
 			files = (
 				E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */,
 				E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */,
+				E264983B27E508F6009D28B3 /* User.swift in Sources */,
+				E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */,
+				E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */,
+				E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */,
+				E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */,
 				E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */,
+				E264983E27E50C0C009D28B3 /* Constants.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
+				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,
+				E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */,
 				E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,7 +491,6 @@
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,7 +519,6 @@
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

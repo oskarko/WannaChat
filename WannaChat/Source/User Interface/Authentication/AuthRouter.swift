@@ -39,4 +39,11 @@ class AuthRouter {
     
     // MARK: - Routes
     
+    func showMainView() {
+        DispatchQueue.main.async { [weak self] in
+            let mainView = MainRouter.getViewController() // UITabBarController
+            mainView.modalPresentationStyle = .fullScreen
+            self?.viewController?.present(mainView, animated: true)
+        }
+    }
 }

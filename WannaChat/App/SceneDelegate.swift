@@ -7,19 +7,21 @@
 //  Copyright © 2022 Oscar R. Garrucho. All rights reserved.
 //
 
+import FirebaseAuth
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var authListener: AuthStateDidChangeListenerHandle?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = scene as? UIWindowScene else { return }
         
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = AuthRouter.getViewController()
         window?.makeKeyAndVisible()
+        autoLogin()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -49,7 +51,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+}
 
+private extension SceneDelegate {
+    
+    // MARK: - AutoLogin
+    
+    func autoLogin() {
+        authListener = Auth.auth().addStateDidChangeListener({ auth, user in
+            
+            if let authListener = self.authListener {
+                Auth.auth().removeStateDidChangeListener(authListener)
+            }
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                let rootView = self.isLoggedIn(with: user) ? MainRouter.getViewController() : AuthRouter.getViewController()
+                self.window?.rootViewController = rootView
+            }
+        })
+    }
+    
+    func isLoggedIn(with user: FirebaseAuth.User?) -> Bool{
+        user != nil && UserDefaults.standard.object(forKey: kCURRENTUSER) != nil
+    }
 
 }
 
