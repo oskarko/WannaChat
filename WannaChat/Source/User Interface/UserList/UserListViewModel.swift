@@ -1,4 +1,4 @@
-//  MainViewModel.swift
+//  UserListViewModel.swift
 //  WannaChat
 //
 //  Created by Oscar R. Garrucho.
@@ -8,16 +8,13 @@
 
 import Foundation
 
-class MainViewModel {
+class UserListViewModel {
     
     // MARK: - Properties
     
-    weak var view: MainViewControllerProtocol?
-    var router: MainRouter?
+    weak var view: UserListViewControllerProtocol?
+    var router: UserListRouter?
     
     // MARK: - Helpers
     
-    func viewDidAppear() {
-        view?.setupView()
-    }
 }

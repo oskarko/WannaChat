@@ -13,6 +13,22 @@
 		E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8227EA075300A1D34E /* MainViewController.swift */; };
 		E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8327EA075300A1D34E /* MainViewModel.swift */; };
 		E2441A8827EA075300A1D34E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2441A8427EA075300A1D34E /* MainViewController.xib */; };
+		E244ECD627EAEF25007724C8 /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECD227EAEF25007724C8 /* ChatListRouter.swift */; };
+		E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECD327EAEF25007724C8 /* ChatListViewController.swift */; };
+		E244ECD827EAEF25007724C8 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECD427EAEF25007724C8 /* ChatListViewModel.swift */; };
+		E244ECD927EAEF25007724C8 /* ChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ECD527EAEF25007724C8 /* ChatListViewController.xib */; };
+		E244ECDE27EAEF40007724C8 /* ChannelListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECDA27EAEF40007724C8 /* ChannelListRouter.swift */; };
+		E244ECDF27EAEF40007724C8 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECDB27EAEF40007724C8 /* ChannelListViewController.swift */; };
+		E244ECE027EAEF40007724C8 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECDC27EAEF40007724C8 /* ChannelListViewModel.swift */; };
+		E244ECE127EAEF40007724C8 /* ChannelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ECDD27EAEF40007724C8 /* ChannelListViewController.xib */; };
+		E244ECE627EAEF4D007724C8 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECE227EAEF4D007724C8 /* UserListRouter.swift */; };
+		E244ECE727EAEF4D007724C8 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECE327EAEF4D007724C8 /* UserListViewController.swift */; };
+		E244ECE827EAEF4D007724C8 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECE427EAEF4D007724C8 /* UserListViewModel.swift */; };
+		E244ECE927EAEF4D007724C8 /* UserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ECE527EAEF4D007724C8 /* UserListViewController.xib */; };
+		E244ECEE27EAEF5B007724C8 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECEA27EAEF5B007724C8 /* SettingsRouter.swift */; };
+		E244ECEF27EAEF5B007724C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECEB27EAEF5B007724C8 /* SettingsViewController.swift */; };
+		E244ECF027EAEF5B007724C8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECEC27EAEF5B007724C8 /* SettingsViewModel.swift */; };
+		E244ECF127EAEF5B007724C8 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ECED27EAEF5B007724C8 /* SettingsViewController.xib */; };
 		E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A152C27E8567900AD4E12 /* FCollectionReference.swift */; };
 		E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */; };
 		E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981527E4C669009D28B3 /* AppDelegate.swift */; };
@@ -37,6 +53,22 @@
 		E2441A8227EA075300A1D34E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E2441A8327EA075300A1D34E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E2441A8427EA075300A1D34E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E244ECD227EAEF25007724C8 /* ChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
+		E244ECD327EAEF25007724C8 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		E244ECD427EAEF25007724C8 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
+		E244ECD527EAEF25007724C8 /* ChatListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListViewController.xib; sourceTree = "<group>"; };
+		E244ECDA27EAEF40007724C8 /* ChannelListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListRouter.swift; sourceTree = "<group>"; };
+		E244ECDB27EAEF40007724C8 /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		E244ECDC27EAEF40007724C8 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		E244ECDD27EAEF40007724C8 /* ChannelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelListViewController.xib; sourceTree = "<group>"; };
+		E244ECE227EAEF4D007724C8 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		E244ECE327EAEF4D007724C8 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		E244ECE427EAEF4D007724C8 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		E244ECE527EAEF4D007724C8 /* UserListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListViewController.xib; sourceTree = "<group>"; };
+		E244ECEA27EAEF5B007724C8 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		E244ECEB27EAEF5B007724C8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E244ECEC27EAEF5B007724C8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E244ECED27EAEF5B007724C8 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		E25A152C27E8567900AD4E12 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E264981227E4C669009D28B3 /* WannaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +125,50 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		E244ECCE27EAEED3007724C8 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				E244ECD227EAEF25007724C8 /* ChatListRouter.swift */,
+				E244ECD427EAEF25007724C8 /* ChatListViewModel.swift */,
+				E244ECD327EAEF25007724C8 /* ChatListViewController.swift */,
+				E244ECD527EAEF25007724C8 /* ChatListViewController.xib */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		E244ECCF27EAEEDA007724C8 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				E244ECDA27EAEF40007724C8 /* ChannelListRouter.swift */,
+				E244ECDC27EAEF40007724C8 /* ChannelListViewModel.swift */,
+				E244ECDB27EAEF40007724C8 /* ChannelListViewController.swift */,
+				E244ECDD27EAEF40007724C8 /* ChannelListViewController.xib */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		E244ECD027EAEEFB007724C8 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				E244ECE227EAEF4D007724C8 /* UserListRouter.swift */,
+				E244ECE427EAEF4D007724C8 /* UserListViewModel.swift */,
+				E244ECE327EAEF4D007724C8 /* UserListViewController.swift */,
+				E244ECE527EAEF4D007724C8 /* UserListViewController.xib */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		E244ECD127EAEF03007724C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E244ECEA27EAEF5B007724C8 /* SettingsRouter.swift */,
+				E244ECEC27EAEF5B007724C8 /* SettingsViewModel.swift */,
+				E244ECEB27EAEF5B007724C8 /* SettingsViewController.swift */,
+				E244ECED27EAEF5B007724C8 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		E25A152E27E8572A00AD4E12 /* FirebaseHelpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +221,10 @@
 		E264982C27E4D155009D28B3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				E244ECD127EAEF03007724C8 /* Settings */,
+				E244ECD027EAEEFB007724C8 /* UserList */,
+				E244ECCF27EAEEDA007724C8 /* ChannelList */,
+				E244ECCE27EAEED3007724C8 /* ChatList */,
 				E2441A8027EA073500A1D34E /* Main */,
 				E264982D27E4D15D009D28B3 /* Authentication */,
 			);
@@ -276,10 +356,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
+				E244ECF127EAEF5B007724C8 /* SettingsViewController.xib in Resources */,
 				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
+				E244ECD927EAEF25007724C8 /* ChatListViewController.xib in Resources */,
 				E2441A8827EA075300A1D34E /* MainViewController.xib in Resources */,
 				E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */,
+				E244ECE927EAEF4D007724C8 /* UserListViewController.xib in Resources */,
 				E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */,
+				E244ECE127EAEF40007724C8 /* ChannelListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,18 +417,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */,
+				E244ECE827EAEF4D007724C8 /* UserListViewModel.swift in Sources */,
 				E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */,
 				E264983B27E508F6009D28B3 /* User.swift in Sources */,
 				E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */,
 				E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */,
 				E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */,
+				E244ECDF27EAEF40007724C8 /* ChannelListViewController.swift in Sources */,
 				E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */,
 				E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */,
+				E244ECF027EAEF5B007724C8 /* SettingsViewModel.swift in Sources */,
+				E244ECD627EAEF25007724C8 /* ChatListRouter.swift in Sources */,
+				E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */,
+				E244ECDE27EAEF40007724C8 /* ChannelListRouter.swift in Sources */,
+				E244ECD827EAEF25007724C8 /* ChatListViewModel.swift in Sources */,
+				E244ECE027EAEF40007724C8 /* ChannelListViewModel.swift in Sources */,
+				E244ECE727EAEF4D007724C8 /* UserListViewController.swift in Sources */,
 				E264983E27E50C0C009D28B3 /* Constants.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
 				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,
 				E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */,
 				E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */,
+				E244ECEE27EAEF5B007724C8 /* SettingsRouter.swift in Sources */,
+				E244ECE627EAEF4D007724C8 /* UserListRouter.swift in Sources */,
+				E244ECEF27EAEF5B007724C8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +587,7 @@
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,6 +616,7 @@
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

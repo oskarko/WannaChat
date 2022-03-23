@@ -1,4 +1,4 @@
-//  MainViewModel.swift
+//  SettingsViewModel.swift
 //  WannaChat
 //
 //  Created by Oscar R. Garrucho.
@@ -8,16 +8,13 @@
 
 import Foundation
 
-class MainViewModel {
+class SettingsViewModel {
     
     // MARK: - Properties
     
-    weak var view: MainViewControllerProtocol?
-    var router: MainRouter?
+    weak var view: SettingsViewControllerProtocol?
+    var router: SettingsRouter?
     
     // MARK: - Helpers
     
-    func viewDidAppear() {
-        view?.setupView()
-    }
 }
