@@ -1,4 +1,4 @@
-//  SettingsViewController.swift
+//  EditProfileViewController.swift
 //  WannaChat
 //
 //  Created by Oscar R. Garrucho.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-protocol SettingsViewControllerProtocol: AnyObject {
+protocol EditProfileViewControllerProtocol: AnyObject {
 
 }
 
-class SettingsViewController: UIViewController {
+class EditProfileViewController: UIViewController {
     
     // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: SettingsViewModel!
+    var viewModel: EditProfileViewModel!
     
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureUI()
         configureTableView()
     }
@@ -33,15 +33,8 @@ class SettingsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        tableView.reloadData()
+        configureNavigationBar(withTitle: "Edit Profile", prefersLargeTitles: false)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        configureNavigationBar(withTitle: "Settings", prefersLargeTitles: true)
-    }
-    
 
     // MARK: - Selectors
 
@@ -50,20 +43,20 @@ class SettingsViewController: UIViewController {
 
     private func configureUI() {
         view.backgroundColor = .tableViewBackgroundColor
+
     }
     
     private func configureTableView() {
-        tableView.register(SettingsHeaderCell.nib, forCellReuseIdentifier: SettingsHeaderCell.identifier)
-        tableView.register(SettingsButtonCell.nib, forCellReuseIdentifier: SettingsButtonCell.identifier)
+        tableView.register(EditProfileHeaderCell.nib, forCellReuseIdentifier: EditProfileHeaderCell.identifier)
+        tableView.register(EditProfileTextFieldCell.nib, forCellReuseIdentifier: EditProfileTextFieldCell.identifier)
         tableView.register(SettingsTextCell.nib, forCellReuseIdentifier: SettingsTextCell.identifier)
-        tableView.register(SettingsLogOutCell.nib, forCellReuseIdentifier: SettingsLogOutCell.identifier)
         tableView.tableFooterView = UIView()
     }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
-extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
+extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate {
     // sections
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.numberOfSections()
@@ -87,26 +80,20 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         cell.selectionStyle = .none
         
-        if let customCell = cell as? SettingsHeaderCell {
+        if let customCell = cell as? EditProfileHeaderCell {
             if let user = User.currentUser {
                 customCell.configure(with: user)
             }
             
             return customCell
         }
-        else if let customCell = cell as? SettingsButtonCell {
+        else if let customCell = cell as? EditProfileTextFieldCell {
             customCell.configure(with: viewModel.getCellTitle(for: indexPath))
             
             return customCell
         }
         else if let customCell = cell as? SettingsTextCell {
             customCell.configure(with: viewModel.getCellTitle(for: indexPath))
-            
-            return customCell
-        }
-        else if let customCell = cell as? SettingsLogOutCell {
-            customCell.configure(with: viewModel.getCellTitle(for: indexPath))
-            customCell.delegate = viewModel
             
             return customCell
         } else {
@@ -125,8 +112,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-// MARK: - SettingsViewControllerProtocol
+// MARK: - EditProfileViewControllerProtocol
 
-extension SettingsViewController: SettingsViewControllerProtocol {
+extension EditProfileViewController: EditProfileViewControllerProtocol {
 
 }

@@ -42,4 +42,19 @@ class SettingsRouter {
     
     // MARK: - Routes
     
+    func showEditProfileView() {
+        DispatchQueue.main.async { [weak self] in
+            let editProfileView = EditProfileRouter.getViewController()
+            self?.viewController?.navigationController?.pushViewController(editProfileView, animated: true)
+        }
+    }
+    
+    func showLoginView() {
+        DispatchQueue.main.async { [weak self] in
+            self?.viewController?.dismiss(animated: true) {
+                UIApplication.rootViewController = AuthRouter.getViewController()
+            }
+        }
+    }
+    
 }

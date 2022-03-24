@@ -62,6 +62,20 @@ class FirebaseUserListener {
         }
     }
     
+    // MARK: - Log Out
+    
+    func logOutCurrentUser(completion: @escaping (_ error: Error?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.removeObject(forKey: kCURRENTUSER)
+            UserDefaults.standard.synchronize()
+            completion(nil)
+        } catch let error as NSError {
+            print("Error login out: ", error.localizedDescription)
+            completion(error)
+        }
+    }
+    
     // MARK: - Resend link methods
     
     func resendVerificationEmail(email: String, completion: @escaping (_ error: Error?) -> Void) {

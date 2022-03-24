@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		726AA59EC1072E3893BF4FD8 /* Pods_WannaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */; };
 		E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A7E27E9E22B00A1D34E /* HUDMessageType.swift */; };
 		E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8127EA075300A1D34E /* MainRouter.swift */; };
 		E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8227EA075300A1D34E /* MainViewController.swift */; };
@@ -29,6 +28,28 @@
 		E244ECEF27EAEF5B007724C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECEB27EAEF5B007724C8 /* SettingsViewController.swift */; };
 		E244ECF027EAEF5B007724C8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECEC27EAEF5B007724C8 /* SettingsViewModel.swift */; };
 		E244ECF127EAEF5B007724C8 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ECED27EAEF5B007724C8 /* SettingsViewController.xib */; };
+		E244ECFF27EB3CD1007724C8 /* SettingsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ECFD27EB3CD1007724C8 /* SettingsHeaderCell.swift */; };
+		E244ED0027EB3CD1007724C8 /* SettingsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ECFE27EB3CD1007724C8 /* SettingsHeaderCell.xib */; };
+		E244ED0327EB41DB007724C8 /* SettingsButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ED0127EB41DA007724C8 /* SettingsButtonCell.swift */; };
+		E244ED0427EB41DB007724C8 /* SettingsButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ED0227EB41DA007724C8 /* SettingsButtonCell.xib */; };
+		E244ED0727EB41F0007724C8 /* SettingsLogOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ED0527EB41F0007724C8 /* SettingsLogOutCell.swift */; };
+		E244ED0827EB41F0007724C8 /* SettingsLogOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ED0627EB41F0007724C8 /* SettingsLogOutCell.xib */; };
+		E244ED0B27EB44C3007724C8 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ED0A27EB44C3007724C8 /* UIView+Ext.swift */; };
+		E244ED0E27EB46B1007724C8 /* SettingsTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244ED0C27EB46B1007724C8 /* SettingsTextCell.swift */; };
+		E244ED0F27EB46B2007724C8 /* SettingsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E244ED0D27EB46B1007724C8 /* SettingsTextCell.xib */; };
+		E248F91D27EB743E006C0B70 /* Pods_WannaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */; };
+		E248F92127EBA3F9006C0B70 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248F92027EBA3F9006C0B70 /* UIApplication+Ext.swift */; };
+		E248F92727EBA5E0006C0B70 /* EditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248F92327EBA5E0006C0B70 /* EditProfileRouter.swift */; };
+		E248F92827EBA5E0006C0B70 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248F92427EBA5E0006C0B70 /* EditProfileViewController.swift */; };
+		E248F92927EBA5E0006C0B70 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248F92527EBA5E0006C0B70 /* EditProfileViewModel.swift */; };
+		E248F92A27EBA5E0006C0B70 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E248F92627EBA5E0006C0B70 /* EditProfileViewController.xib */; };
+		E248F92F27EBA869006C0B70 /* EditProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248F92D27EBA869006C0B70 /* EditProfileHeaderCell.swift */; };
+		E248F93027EBA869006C0B70 /* EditProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E248F92E27EBA869006C0B70 /* EditProfileHeaderCell.xib */; };
+		E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */; };
+		E258D8DC27EC45BC0084C743 /* EditProfileTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */; };
+		E258D8E027EC48F60084C743 /* EditProfileSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */; };
+		E258D8E227EC490A0084C743 /* EditProfileHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8E127EC490A0084C743 /* EditProfileHeaderType.swift */; };
+		E258D8E427EC49170084C743 /* EditProfileTextType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8E327EC49170084C743 /* EditProfileTextType.swift */; };
 		E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A152C27E8567900AD4E12 /* FCollectionReference.swift */; };
 		E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */; };
 		E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264981527E4C669009D28B3 /* AppDelegate.swift */; };
@@ -42,6 +63,12 @@
 		E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E264983127E4D17E009D28B3 /* AuthViewController.xib */; };
 		E264983B27E508F6009D28B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983A27E508F6009D28B3 /* User.swift */; };
 		E264983E27E50C0C009D28B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983D27E50C0C009D28B3 /* Constants.swift */; };
+		E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */; };
+		E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */; };
+		E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */; };
+		E2B1C9F127EB598000148566 /* SettingsTextType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9F027EB598000148566 /* SettingsTextType.swift */; };
+		E2B1C9F327EB6D0400148566 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9F227EB6D0400148566 /* UIViewController+Ext.swift */; };
+		E2B1C9F527EB6E6600148566 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9F427EB6E6600148566 /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +96,27 @@
 		E244ECEB27EAEF5B007724C8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E244ECEC27EAEF5B007724C8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		E244ECED27EAEF5B007724C8 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		E244ECFD27EB3CD1007724C8 /* SettingsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderCell.swift; sourceTree = "<group>"; };
+		E244ECFE27EB3CD1007724C8 /* SettingsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsHeaderCell.xib; sourceTree = "<group>"; };
+		E244ED0127EB41DA007724C8 /* SettingsButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonCell.swift; sourceTree = "<group>"; };
+		E244ED0227EB41DA007724C8 /* SettingsButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsButtonCell.xib; sourceTree = "<group>"; };
+		E244ED0527EB41F0007724C8 /* SettingsLogOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLogOutCell.swift; sourceTree = "<group>"; };
+		E244ED0627EB41F0007724C8 /* SettingsLogOutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsLogOutCell.xib; sourceTree = "<group>"; };
+		E244ED0A27EB44C3007724C8 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		E244ED0C27EB46B1007724C8 /* SettingsTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextCell.swift; sourceTree = "<group>"; };
+		E244ED0D27EB46B1007724C8 /* SettingsTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextCell.xib; sourceTree = "<group>"; };
+		E248F92027EBA3F9006C0B70 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
+		E248F92327EBA5E0006C0B70 /* EditProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
+		E248F92427EBA5E0006C0B70 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		E248F92527EBA5E0006C0B70 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		E248F92627EBA5E0006C0B70 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		E248F92D27EBA869006C0B70 /* EditProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeaderCell.swift; sourceTree = "<group>"; };
+		E248F92E27EBA869006C0B70 /* EditProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileHeaderCell.xib; sourceTree = "<group>"; };
+		E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTextFieldCell.swift; sourceTree = "<group>"; };
+		E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileTextFieldCell.xib; sourceTree = "<group>"; };
+		E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSectionType.swift; sourceTree = "<group>"; };
+		E258D8E127EC490A0084C743 /* EditProfileHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeaderType.swift; sourceTree = "<group>"; };
+		E258D8E327EC49170084C743 /* EditProfileTextType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTextType.swift; sourceTree = "<group>"; };
 		E25A152C27E8567900AD4E12 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E264981227E4C669009D28B3 /* WannaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +132,12 @@
 		E264983127E4D17E009D28B3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		E264983A27E508F6009D28B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E264983D27E50C0C009D28B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionType.swift; sourceTree = "<group>"; };
+		E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderType.swift; sourceTree = "<group>"; };
+		E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonType.swift; sourceTree = "<group>"; };
+		E2B1C9F027EB598000148566 /* SettingsTextType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextType.swift; sourceTree = "<group>"; };
+		E2B1C9F227EB6D0400148566 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		E2B1C9F427EB6E6600148566 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				726AA59EC1072E3893BF4FD8 /* Pods_WannaChat.framework in Frameworks */,
+				E248F91D27EB743E006C0B70 /* Pods_WannaChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,12 +215,122 @@
 		E244ECD127EAEF03007724C8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E2B1C9E927EB491E00148566 /* Models */,
+				E244ECFC27EB3C0E007724C8 /* Cells */,
 				E244ECEA27EAEF5B007724C8 /* SettingsRouter.swift */,
 				E244ECEC27EAEF5B007724C8 /* SettingsViewModel.swift */,
 				E244ECEB27EAEF5B007724C8 /* SettingsViewController.swift */,
 				E244ECED27EAEF5B007724C8 /* SettingsViewController.xib */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		E244ECFC27EB3C0E007724C8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E244ED1227EB4734007724C8 /* HeaderCell */,
+				E244ED1127EB4729007724C8 /* ButtonCell */,
+				E244ED1027EB4722007724C8 /* TextCell */,
+				E244ED1327EB473C007724C8 /* LogOutCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E244ED0927EB44B6007724C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E248F92027EBA3F9006C0B70 /* UIApplication+Ext.swift */,
+				E2B1C9F427EB6E6600148566 /* UIColor+Ext.swift */,
+				E244ED0A27EB44C3007724C8 /* UIView+Ext.swift */,
+				E2B1C9F227EB6D0400148566 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E244ED1027EB4722007724C8 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				E244ED0C27EB46B1007724C8 /* SettingsTextCell.swift */,
+				E244ED0D27EB46B1007724C8 /* SettingsTextCell.xib */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		E244ED1127EB4729007724C8 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				E244ED0127EB41DA007724C8 /* SettingsButtonCell.swift */,
+				E244ED0227EB41DA007724C8 /* SettingsButtonCell.xib */,
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		E244ED1227EB4734007724C8 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				E244ECFD27EB3CD1007724C8 /* SettingsHeaderCell.swift */,
+				E244ECFE27EB3CD1007724C8 /* SettingsHeaderCell.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		E244ED1327EB473C007724C8 /* LogOutCell */ = {
+			isa = PBXGroup;
+			children = (
+				E244ED0527EB41F0007724C8 /* SettingsLogOutCell.swift */,
+				E244ED0627EB41F0007724C8 /* SettingsLogOutCell.xib */,
+			);
+			path = LogOutCell;
+			sourceTree = "<group>";
+		};
+		E248F92227EBA5CC006C0B70 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E258D8DE27EC48D30084C743 /* Models */,
+				E248F92B27EBA849006C0B70 /* Cells */,
+				E248F92327EBA5E0006C0B70 /* EditProfileRouter.swift */,
+				E248F92527EBA5E0006C0B70 /* EditProfileViewModel.swift */,
+				E248F92427EBA5E0006C0B70 /* EditProfileViewController.swift */,
+				E248F92627EBA5E0006C0B70 /* EditProfileViewController.xib */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		E248F92B27EBA849006C0B70 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E258D8DD27EC45C50084C743 /* TextFieldCell */,
+				E248F92C27EBA853006C0B70 /* HeaderCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E248F92C27EBA853006C0B70 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				E248F92D27EBA869006C0B70 /* EditProfileHeaderCell.swift */,
+				E248F92E27EBA869006C0B70 /* EditProfileHeaderCell.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		E258D8DD27EC45C50084C743 /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */,
+				E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		E258D8DE27EC48D30084C743 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */,
+				E258D8E127EC490A0084C743 /* EditProfileHeaderType.swift */,
+				E258D8E327EC49170084C743 /* EditProfileTextType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E25A152E27E8572A00AD4E12 /* FirebaseHelpers */ = {
@@ -211,6 +375,7 @@
 		E264982B27E4D14F009D28B3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E244ED0927EB44B6007724C8 /* Extensions */,
 				E264983C27E50BFD009D28B3 /* Utils */,
 				E264983827E508C1009D28B3 /* Common */,
 				E264982C27E4D155009D28B3 /* User Interface */,
@@ -221,6 +386,7 @@
 		E264982C27E4D155009D28B3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				E248F92227EBA5CC006C0B70 /* EditProfile */,
 				E244ECD127EAEF03007724C8 /* Settings */,
 				E244ECD027EAEEFB007724C8 /* UserList */,
 				E244ECCF27EAEEDA007724C8 /* ChannelList */,
@@ -284,6 +450,17 @@
 				E264983D27E50C0C009D28B3 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E2B1C9E927EB491E00148566 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */,
+				E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */,
+				E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */,
+				E2B1C9F027EB598000148566 /* SettingsTextType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F6C83C80D2171A8BD334D1FD /* Pods */ = {
@@ -358,10 +535,17 @@
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
 				E244ECF127EAEF5B007724C8 /* SettingsViewController.xib in Resources */,
 				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
+				E244ED0027EB3CD1007724C8 /* SettingsHeaderCell.xib in Resources */,
 				E244ECD927EAEF25007724C8 /* ChatListViewController.xib in Resources */,
+				E244ED0F27EB46B2007724C8 /* SettingsTextCell.xib in Resources */,
 				E2441A8827EA075300A1D34E /* MainViewController.xib in Resources */,
+				E248F93027EBA869006C0B70 /* EditProfileHeaderCell.xib in Resources */,
+				E244ED0827EB41F0007724C8 /* SettingsLogOutCell.xib in Resources */,
+				E244ED0427EB41DB007724C8 /* SettingsButtonCell.xib in Resources */,
 				E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */,
+				E248F92A27EBA5E0006C0B70 /* EditProfileViewController.xib in Resources */,
 				E244ECE927EAEF4D007724C8 /* UserListViewController.xib in Resources */,
+				E258D8DC27EC45BC0084C743 /* EditProfileTextFieldCell.xib in Resources */,
 				E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */,
 				E244ECE127EAEF40007724C8 /* ChannelListViewController.xib in Resources */,
 			);
@@ -417,30 +601,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */,
+				E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */,
 				E244ECE827EAEF4D007724C8 /* UserListViewModel.swift in Sources */,
+				E2B1C9F327EB6D0400148566 /* UIViewController+Ext.swift in Sources */,
 				E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */,
+				E244ED0327EB41DB007724C8 /* SettingsButtonCell.swift in Sources */,
 				E264983B27E508F6009D28B3 /* User.swift in Sources */,
+				E258D8E427EC49170084C743 /* EditProfileTextType.swift in Sources */,
 				E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */,
+				E258D8E227EC490A0084C743 /* EditProfileHeaderType.swift in Sources */,
 				E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */,
 				E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */,
 				E244ECDF27EAEF40007724C8 /* ChannelListViewController.swift in Sources */,
 				E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */,
 				E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */,
 				E244ECF027EAEF5B007724C8 /* SettingsViewModel.swift in Sources */,
+				E244ECFF27EB3CD1007724C8 /* SettingsHeaderCell.swift in Sources */,
+				E248F92727EBA5E0006C0B70 /* EditProfileRouter.swift in Sources */,
 				E244ECD627EAEF25007724C8 /* ChatListRouter.swift in Sources */,
+				E248F92127EBA3F9006C0B70 /* UIApplication+Ext.swift in Sources */,
+				E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */,
+				E244ED0727EB41F0007724C8 /* SettingsLogOutCell.swift in Sources */,
+				E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */,
+				E244ED0B27EB44C3007724C8 /* UIView+Ext.swift in Sources */,
 				E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */,
+				E248F92F27EBA869006C0B70 /* EditProfileHeaderCell.swift in Sources */,
 				E244ECDE27EAEF40007724C8 /* ChannelListRouter.swift in Sources */,
 				E244ECD827EAEF25007724C8 /* ChatListViewModel.swift in Sources */,
 				E244ECE027EAEF40007724C8 /* ChannelListViewModel.swift in Sources */,
 				E244ECE727EAEF4D007724C8 /* UserListViewController.swift in Sources */,
+				E248F92827EBA5E0006C0B70 /* EditProfileViewController.swift in Sources */,
 				E264983E27E50C0C009D28B3 /* Constants.swift in Sources */,
+				E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
 				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,
 				E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */,
+				E258D8E027EC48F60084C743 /* EditProfileSectionType.swift in Sources */,
+				E248F92927EBA5E0006C0B70 /* EditProfileViewModel.swift in Sources */,
 				E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */,
 				E244ECEE27EAEF5B007724C8 /* SettingsRouter.swift in Sources */,
 				E244ECE627EAEF4D007724C8 /* UserListRouter.swift in Sources */,
 				E244ECEF27EAEF5B007724C8 /* SettingsViewController.swift in Sources */,
+				E2B1C9F527EB6E6600148566 /* UIColor+Ext.swift in Sources */,
+				E244ED0E27EB46B1007724C8 /* SettingsTextCell.swift in Sources */,
+				E2B1C9F127EB598000148566 /* SettingsTextType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 934NVR3K3Z;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -612,6 +817,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 934NVR3K3Z;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WannaChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

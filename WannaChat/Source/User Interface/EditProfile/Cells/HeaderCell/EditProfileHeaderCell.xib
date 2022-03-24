@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="EditProfileHeaderCell" customModule="WannaChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="llK-8Z-pKO">
+                        <rect key="frame" x="16" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="1AG-q4-YAN"/>
+                            <constraint firstAttribute="height" constant="60" id="ACc-lb-hKm"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFD-Jw-Hf2">
+                        <rect key="frame" x="16" y="70" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="WQX-Ge-axU"/>
+                            <constraint firstAttribute="width" constant="60" id="vew-Dg-YfB"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Edit"/>
+                        <connections>
+                            <action selector="editButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="o7p-6m-Uca"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name and add an optional picture" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uL1-zP-iaV">
+                        <rect key="frame" x="92" y="10" width="212" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="T6A-Ds-aFJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="llK-8Z-pKO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="90Y-Vu-siR"/>
+                    <constraint firstItem="uL1-zP-iaV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BQw-8i-l0J"/>
+                    <constraint firstItem="uL1-zP-iaV" firstAttribute="leading" secondItem="llK-8Z-pKO" secondAttribute="trailing" constant="16" id="GzT-dP-7R9"/>
+                    <constraint firstAttribute="trailing" secondItem="uL1-zP-iaV" secondAttribute="trailing" constant="16" id="cAP-ZG-8cu"/>
+                    <constraint firstItem="AFD-Jw-Hf2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dvC-hq-4Ou"/>
+                    <constraint firstItem="llK-8Z-pKO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qmV-s6-V40"/>
+                    <constraint firstAttribute="bottom" secondItem="AFD-Jw-Hf2" secondAttribute="bottom" id="xWY-LB-EHE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="llK-8Z-pKO" id="zkn-Mf-E2O"/>
+                <outlet property="editButton" destination="AFD-Jw-Hf2" id="Nf8-M9-SDv"/>
+                <outlet property="nameLabel" destination="uL1-zP-iaV" id="w99-mz-J1p"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avatar" width="184" height="184"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
