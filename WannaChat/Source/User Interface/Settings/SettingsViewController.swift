@@ -69,10 +69,6 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         viewModel.numberOfSections()
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        CGFloat(viewModel.heightForHeader(at: section))
-    }
-    
     // rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRows(at: section)
@@ -88,9 +84,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         
         if let customCell = cell as? SettingsHeaderCell {
-            if let user = User.currentUser {
-                customCell.configure(with: user)
-            }
+            customCell.configure(with: viewModel.getUser())
             
             return customCell
         }

@@ -6,10 +6,11 @@
 //  Copyright © 2021 Oscar R. Garrucho. All rights reserved.
 //
 
+import ProgressHUD
 import UIKit
 
 protocol EditProfileViewControllerProtocol: AnyObject {
-
+    func refreshCells(at indexPaths: [IndexPath])
 }
 
 class EditProfileViewController: UIViewController {
@@ -19,7 +20,6 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: EditProfileViewModel!
-    
     
     // MARK: - Lifecycle
 
@@ -34,6 +34,7 @@ class EditProfileViewController: UIViewController {
         super.viewDidAppear(animated)
         
         configureNavigationBar(withTitle: "Edit Profile", prefersLargeTitles: false)
+        tableView.reloadData()
     }
 
     // MARK: - Selectors
@@ -43,7 +44,6 @@ class EditProfileViewController: UIViewController {
 
     private func configureUI() {
         view.backgroundColor = .tableViewBackgroundColor
-
     }
     
     private func configureTableView() {
@@ -51,6 +51,10 @@ class EditProfileViewController: UIViewController {
         tableView.register(EditProfileTextFieldCell.nib, forCellReuseIdentifier: EditProfileTextFieldCell.identifier)
         tableView.register(SettingsTextCell.nib, forCellReuseIdentifier: SettingsTextCell.identifier)
         tableView.tableFooterView = UIView()
+        
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
     }
 }
 
@@ -61,9 +65,16 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.numberOfSections()
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        CGFloat(viewModel.heightForHeader(at: section))
+        
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard viewModel.heightForHeader(at: section) > 0 else { return nil }
+
+        let view = UIView(frame: CGRect(origin: .zero,
+                                        size: CGSize(width: CGFloat(viewModel.heightForHeader(at: section)),
+                                                     height: tableView.frame.width)))
+        view.backgroundColor = .tableViewBackgroundColor
+
+        return view
     }
     
     // rows
@@ -81,14 +92,14 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
         cell.selectionStyle = .none
         
         if let customCell = cell as? EditProfileHeaderCell {
-            if let user = User.currentUser {
-                customCell.configure(with: user)
-            }
+            customCell.configure(with: viewModel.getUser())
+            customCell.delegate = self
             
             return customCell
         }
         else if let customCell = cell as? EditProfileTextFieldCell {
             customCell.configure(with: viewModel.getCellTitle(for: indexPath))
+            customCell.delegate = self
             
             return customCell
         }
@@ -115,5 +126,27 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
 // MARK: - EditProfileViewControllerProtocol
 
 extension EditProfileViewController: EditProfileViewControllerProtocol {
+    func refreshCells(at indexPaths: [IndexPath]) {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.beginUpdates()
+            self?.tableView.reloadRows(at: indexPaths, with: .none)
+            self?.tableView.endUpdates()
+        }
+    }
+}
 
+// MARK: - EditProfileHeaderCellDelegate
+
+extension EditProfileViewController: EditProfileHeaderCellDelegate {
+    func editButtonTapped() {
+        viewModel.showImageGallery()
+    }
+}
+
+// MARK: - EditProfileTextFieldCellDelegate
+
+extension EditProfileViewController: EditProfileTextFieldCellDelegate {
+    func usernameDidChange(_ username: String) {
+        viewModel.usernameDidChange(username)
+    }
 }

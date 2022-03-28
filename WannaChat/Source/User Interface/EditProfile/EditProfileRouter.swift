@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class EditProfileRouter {
     
@@ -39,12 +40,16 @@ class EditProfileRouter {
     
     // MARK: - Routes
     
+    func present(_ view: UIViewController) {
+        DispatchQueue.main.async { [weak self] in
+            self?.viewController?.present(view, animated: true)
+        }
+    }
+    
     func showSelectStatusView() {
-        func showLoginView() {
-            DispatchQueue.main.async { [weak self] in
-                let editProfileView = EditProfileRouter.getViewController()
-                self?.viewController?.navigationController?.pushViewController(editProfileView, animated: true)
-            }
+        DispatchQueue.main.async { [weak self] in
+            let statusView = StatusRouter.getViewController()
+            self?.viewController?.navigationController?.pushViewController(statusView, animated: true)
         }
     }
 }

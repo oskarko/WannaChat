@@ -19,10 +19,16 @@ class SettingsHeaderCell: UITableViewCell {
     
     // MARK: - Helpers
     
-    func configure(with user: User) {
+    func configure(with user: User?) {
+        guard let user = user else { return }
+
         profileUsernameLabel.text = user.username
         profileStatusLabel.text = user.status
         
-        //profileImageView
+        if !user.avatarLink.isEmpty {
+            FileStorage.downloadImage(imageURL: user.avatarLink) { [weak self] avatarImage in
+                self?.profileImageView.image = avatarImage?.circleMasked
+            }
+        }
     }
 }

@@ -31,10 +31,6 @@ class SettingsViewModel {
         SettingsSectionType.allCases.count
     }
     
-    func heightForHeader(at section: Int) -> Int {
-        section == 0 ? 0 : 10
-    }
-    
     func numberOfRows(at section: Int) -> Int {
         guard let sectionType = SettingsSectionType(rawValue: section) else { return 0 }
         
@@ -72,6 +68,10 @@ class SettingsViewModel {
         else { return }
         
         router?.showEditProfileView()
+    }
+    
+    func getUser() -> User? {
+        User.currentUser
     }
 }
 

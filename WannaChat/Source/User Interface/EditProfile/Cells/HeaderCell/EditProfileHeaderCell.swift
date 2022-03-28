@@ -9,6 +9,10 @@
 
 import UIKit
 
+protocol EditProfileHeaderCellDelegate: AnyObject {
+    func editButtonTapped()
+}
+
 class EditProfileHeaderCell: UITableViewCell {
 
     // MARK: - Properties
@@ -17,15 +21,27 @@ class EditProfileHeaderCell: UITableViewCell {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     
+    weak var delegate: EditProfileHeaderCellDelegate?
+    
+    // MARK: - Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     // MARK: - Selectors
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
-        
+        delegate?.editButtonTapped()
     }
     
     // MARK: - Helpers
     
-    func configure(with user: User) {
-        
+    func configure(with user: User?) {
+        guard let avatarLink = user?.avatarLink, !avatarLink.isEmpty else { return }
+
+        FileStorage.downloadImage(imageURL: avatarLink) { [weak self] avatarImage in
+            self?.avatarImageView.image = avatarImage?.circleMasked
+        }
     }
 }

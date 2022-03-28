@@ -9,10 +9,42 @@
 
 import UIKit
 
+protocol EditProfileTextFieldCellDelegate: AnyObject {
+    func usernameDidChange(_ username: String)
+}
+
 class EditProfileTextFieldCell: UITableViewCell {
 
-    func configure(with text: String?) {
+    // MARK: - Properties
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    weak var delegate: EditProfileTextFieldCellDelegate?
+    
+    // MARK: - Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
+        usernameTextField.delegate = self
     }
     
+    // MARK: - Helpers
+    
+    func configure(with text: String?) {
+        usernameTextField.text = text
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension EditProfileTextFieldCell: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let username = textField.text, !username.isEmpty {
+            delegate?.usernameDidChange(username)
+        }
+        textField.resignFirstResponder()
+        return false
+    }
 }

@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="WannaChat" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusViewController" customModule="WannaChat" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="U6E-7G-tGD" id="RUt-ZI-nSM"/>
+                <outlet property="tableView" destination="u6R-lF-57r" id="evY-Go-DUM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,23 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="35" translatesAutoresizingMaskIntoConstraints="NO" id="U6E-7G-tGD">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u6R-lF-57r">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" name="TableViewBackgroundColor"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="yIg-ST-Bx2"/>
-                        <outlet property="delegate" destination="-1" id="tcI-ls-YEn"/>
+                        <outlet property="dataSource" destination="-1" id="tOU-aq-90p"/>
+                        <outlet property="delegate" destination="-1" id="7cf-W0-VLb"/>
                     </connections>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="TableViewBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="U6E-7G-tGD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0OC-FM-Whg"/>
-                <constraint firstItem="U6E-7G-tGD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y2G-hI-HZq"/>
-                <constraint firstItem="U6E-7G-tGD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dfv-QL-4J4"/>
-                <constraint firstItem="U6E-7G-tGD" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="rF5-KP-VRb"/>
-            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </view>
     </objects>

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20C30C427F1EA8200CB7D3B /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C30C327F1EA8200CB7D3B /* UIImage+Ext.swift */; };
+		E20C30C627F1EE1400CB7D3B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C30C527F1EE1400CB7D3B /* Status.swift */; };
+		E20C30CC27F1EFE000CB7D3B /* StatusRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C30C827F1EFE000CB7D3B /* StatusRouter.swift */; };
+		E20C30CD27F1EFE000CB7D3B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C30C927F1EFE000CB7D3B /* StatusViewController.swift */; };
+		E20C30CE27F1EFE000CB7D3B /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C30CA27F1EFE000CB7D3B /* StatusViewModel.swift */; };
+		E20C30CF27F1EFE000CB7D3B /* StatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C30CB27F1EFE000CB7D3B /* StatusViewController.xib */; };
+		E239E7ED27ECC1F300D13428 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239E7EC27ECC1F300D13428 /* FileStorage.swift */; };
+		E239E7EF27ECDEB500D13428 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239E7EE27ECDEB500D13428 /* String+Ext.swift */; };
 		E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A7E27E9E22B00A1D34E /* HUDMessageType.swift */; };
 		E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8127EA075300A1D34E /* MainRouter.swift */; };
 		E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2441A8227EA075300A1D34E /* MainViewController.swift */; };
@@ -75,6 +83,14 @@
 		428D9C8BC3FE1A61C33652E0 /* Pods-WannaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaChat.debug.xcconfig"; path = "Target Support Files/Pods-WannaChat/Pods-WannaChat.debug.xcconfig"; sourceTree = "<group>"; };
 		63F00507411AAD4ABEDC127F /* Pods_WannaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C306481ABB92B4E6508F5ED2 /* Pods-WannaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaChat.release.xcconfig"; path = "Target Support Files/Pods-WannaChat/Pods-WannaChat.release.xcconfig"; sourceTree = "<group>"; };
+		E20C30C327F1EA8200CB7D3B /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		E20C30C527F1EE1400CB7D3B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		E20C30C827F1EFE000CB7D3B /* StatusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRouter.swift; sourceTree = "<group>"; };
+		E20C30C927F1EFE000CB7D3B /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		E20C30CA27F1EFE000CB7D3B /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		E20C30CB27F1EFE000CB7D3B /* StatusViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusViewController.xib; sourceTree = "<group>"; };
+		E239E7EC27ECC1F300D13428 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		E239E7EE27ECDEB500D13428 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		E2441A7E27E9E22B00A1D34E /* HUDMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDMessageType.swift; sourceTree = "<group>"; };
 		E2441A8127EA075300A1D34E /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		E2441A8227EA075300A1D34E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +176,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E20C30C727F1EFCE00CB7D3B /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				E20C30C827F1EFE000CB7D3B /* StatusRouter.swift */,
+				E20C30CA27F1EFE000CB7D3B /* StatusViewModel.swift */,
+				E20C30C927F1EFE000CB7D3B /* StatusViewController.swift */,
+				E20C30CB27F1EFE000CB7D3B /* StatusViewController.xib */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
 		E2441A7D27E9E21200A1D34E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +270,8 @@
 				E2B1C9F427EB6E6600148566 /* UIColor+Ext.swift */,
 				E244ED0A27EB44C3007724C8 /* UIView+Ext.swift */,
 				E2B1C9F227EB6D0400148566 /* UIViewController+Ext.swift */,
+				E239E7EE27ECDEB500D13428 /* String+Ext.swift */,
+				E20C30C327F1EA8200CB7D3B /* UIImage+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,8 +328,8 @@
 		E248F92B27EBA849006C0B70 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E258D8DD27EC45C50084C743 /* TextFieldCell */,
 				E248F92C27EBA853006C0B70 /* HeaderCell */,
+				E258D8DD27EC45C50084C743 /* TextFieldCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -338,6 +367,7 @@
 			children = (
 				E25A152C27E8567900AD4E12 /* FCollectionReference.swift */,
 				E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */,
+				E239E7EC27ECC1F300D13428 /* FileStorage.swift */,
 			);
 			path = FirebaseHelpers;
 			sourceTree = "<group>";
@@ -386,6 +416,7 @@
 		E264982C27E4D155009D28B3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				E20C30C727F1EFCE00CB7D3B /* Status */,
 				E248F92227EBA5CC006C0B70 /* EditProfile */,
 				E244ECD127EAEF03007724C8 /* Settings */,
 				E244ECD027EAEEFB007724C8 /* UserList */,
@@ -440,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				E264983A27E508F6009D28B3 /* User.swift */,
+				E20C30C527F1EE1400CB7D3B /* Status.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -535,6 +567,7 @@
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
 				E244ECF127EAEF5B007724C8 /* SettingsViewController.xib in Resources */,
 				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
+				E20C30CF27F1EFE000CB7D3B /* StatusViewController.xib in Resources */,
 				E244ED0027EB3CD1007724C8 /* SettingsHeaderCell.xib in Resources */,
 				E244ECD927EAEF25007724C8 /* ChatListViewController.xib in Resources */,
 				E244ED0F27EB46B2007724C8 /* SettingsTextCell.xib in Resources */,
@@ -600,17 +633,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20C30CE27F1EFE000CB7D3B /* StatusViewModel.swift in Sources */,
 				E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */,
 				E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */,
+				E239E7EF27ECDEB500D13428 /* String+Ext.swift in Sources */,
 				E244ECE827EAEF4D007724C8 /* UserListViewModel.swift in Sources */,
+				E20C30CC27F1EFE000CB7D3B /* StatusRouter.swift in Sources */,
 				E2B1C9F327EB6D0400148566 /* UIViewController+Ext.swift in Sources */,
 				E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */,
 				E244ED0327EB41DB007724C8 /* SettingsButtonCell.swift in Sources */,
 				E264983B27E508F6009D28B3 /* User.swift in Sources */,
 				E258D8E427EC49170084C743 /* EditProfileTextType.swift in Sources */,
+				E20C30C627F1EE1400CB7D3B /* Status.swift in Sources */,
+				E20C30C427F1EA8200CB7D3B /* UIImage+Ext.swift in Sources */,
 				E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */,
 				E258D8E227EC490A0084C743 /* EditProfileHeaderType.swift in Sources */,
 				E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */,
+				E239E7ED27ECC1F300D13428 /* FileStorage.swift in Sources */,
 				E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */,
 				E244ECDF27EAEF40007724C8 /* ChannelListViewController.swift in Sources */,
 				E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */,
@@ -638,6 +677,7 @@
 				E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */,
 				E258D8E027EC48F60084C743 /* EditProfileSectionType.swift in Sources */,
 				E248F92927EBA5E0006C0B70 /* EditProfileViewModel.swift in Sources */,
+				E20C30CD27F1EFE000CB7D3B /* StatusViewController.swift in Sources */,
 				E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */,
 				E244ECEE27EAEF5B007724C8 /* SettingsRouter.swift in Sources */,
 				E244ECE627EAEF4D007724C8 /* UserListRouter.swift in Sources */,

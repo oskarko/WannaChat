@@ -19,6 +19,6 @@ extension SettingsHeaderType {
     }
     
     public var height: Int {
-        80
+        76
     }
 }
