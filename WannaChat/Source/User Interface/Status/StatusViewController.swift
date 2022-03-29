@@ -29,9 +29,6 @@ class StatusViewController: UIViewController {
         configureUI()
         configureTableView()
     }
-
-    // MARK: - Selectors
-
     
     // MARK: - Helpers
 

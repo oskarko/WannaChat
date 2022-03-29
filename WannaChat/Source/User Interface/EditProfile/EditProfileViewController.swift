@@ -26,24 +26,16 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureUI()
+        configureNavigationItem()
         configureTableView()
+        configureUI()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        configureNavigationBar(withTitle: "Edit Profile", prefersLargeTitles: false)
-        tableView.reloadData()
-    }
-
-    // MARK: - Selectors
-
     
     // MARK: - Helpers
-
-    private func configureUI() {
-        view.backgroundColor = .tableViewBackgroundColor
+    
+    private func configureNavigationItem() {
+        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.title = "Edit Profile"
     }
     
     private func configureTableView() {
@@ -55,6 +47,10 @@ class EditProfileViewController: UIViewController {
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
         }
+    }
+    
+    private func configureUI() {
+        view.backgroundColor = .tableViewBackgroundColor
     }
 }
 

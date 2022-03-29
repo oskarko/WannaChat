@@ -34,7 +34,7 @@ class UserListViewController: UIViewController {
     // MARK: - Helpers
 
     private func configureUI() {
-        view.backgroundColor = .systemGreen
+
 
     }
     

@@ -26,8 +26,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureUI()
+        configureNavigationBar(withTitle: "Settings", prefersLargeTitles: true)
         configureTableView()
+        configureUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,21 +37,7 @@ class SettingsViewController: UIViewController {
         tableView.reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        configureNavigationBar(withTitle: "Settings", prefersLargeTitles: true)
-    }
-    
-
-    // MARK: - Selectors
-
-    
     // MARK: - Helpers
-
-    private func configureUI() {
-        view.backgroundColor = .tableViewBackgroundColor
-    }
     
     private func configureTableView() {
         tableView.register(SettingsHeaderCell.nib, forCellReuseIdentifier: SettingsHeaderCell.identifier)
@@ -58,6 +45,10 @@ class SettingsViewController: UIViewController {
         tableView.register(SettingsTextCell.nib, forCellReuseIdentifier: SettingsTextCell.identifier)
         tableView.register(SettingsLogOutCell.nib, forCellReuseIdentifier: SettingsLogOutCell.identifier)
         tableView.tableFooterView = UIView()
+    }
+    
+    private func configureUI() {
+        view.backgroundColor = .tableViewBackgroundColor
     }
 }
 

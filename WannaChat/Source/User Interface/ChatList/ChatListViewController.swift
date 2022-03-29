@@ -34,7 +34,7 @@ class ChatListViewController: UIViewController {
     // MARK: - Helpers
 
     private func configureUI() {
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemGreen
 
     }
     
