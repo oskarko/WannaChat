@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol SettingsViewControllerProtocol: AnyObject {
-
-}
-
 class SettingsViewController: UIViewController {
     
     // MARK: - Properties
@@ -112,6 +108,5 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - SettingsViewControllerProtocol
 
-extension SettingsViewController: SettingsViewControllerProtocol {
-
-}
+protocol SettingsViewControllerProtocol: AnyObject { }
+extension SettingsViewController: SettingsViewControllerProtocol { }

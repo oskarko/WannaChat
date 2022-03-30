@@ -43,16 +43,6 @@ class StatusViewController: UIViewController {
     
 }
 
-// MARK: - StatusViewControllerProtocol
-
-extension StatusViewController: StatusViewControllerProtocol {
-    func reloadData() {
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
-        }
-    }
-}
-
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension StatusViewController: UITableViewDataSource, UITableViewDelegate {
@@ -63,7 +53,6 @@ extension StatusViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = viewModel.getStatus(for: indexPath)
         cell.accessoryType = viewModel.isCurrentStatus(for: indexPath) ? .checkmark : .none
@@ -74,5 +63,15 @@ extension StatusViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath)
+    }
+}
+
+// MARK: - StatusViewControllerProtocol
+
+extension StatusViewController: StatusViewControllerProtocol {
+    func reloadData() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 }

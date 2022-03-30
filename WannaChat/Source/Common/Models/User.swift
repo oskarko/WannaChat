@@ -10,6 +10,7 @@
 import Firebase
 import FirebaseFirestoreSwift
 import Foundation
+import UIKit
 
 struct User: Codable {
     var id: String
@@ -51,5 +52,35 @@ func saveUserLocally(_ user: User) {
         UserDefaults.standard.set(data, forKey: kCURRENTUSER)
     } catch {
         print("Error saving user locally: ", error.localizedDescription)
+    }
+}
+
+func createDummyUsers() {
+    
+    let names = ["Gearge Duggan", "Alfie Thornton", "Alison Stamp", "Rachelle Neale", "Phil O'lowan", "Juanita Bate"]
+    var imageIndex = 1
+    var userIndex = 1
+    
+    for i in 0..<6 {
+        let id = UUID().uuidString
+        let fileDirectory = "Avatars/_\(id).jpg"
+        
+        if let userImage = UIImage(named: "user\(i + 1)") {
+            FileStorage.uploadImage(userImage, directory: fileDirectory) { avatarLink in
+                let user = User(id: id,
+                                username: names[i],
+                                email: "user\(userIndex)@mail.com",
+                                pushId: "",
+                                avatarLink: avatarLink ?? "",
+                                status: Status(rawValue: i)?.stringValue ?? "")
+                userIndex += 1
+                FirebaseUserListener.shared.saveUserToFireStore(user)
+            }
+        }
+        
+        imageIndex += 1
+        if imageIndex == 6 {
+            imageIndex = 1
+        }
     }
 }

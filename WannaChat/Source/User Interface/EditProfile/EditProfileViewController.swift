@@ -66,8 +66,10 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
         guard viewModel.heightForHeader(at: section) > 0 else { return nil }
 
         let view = UIView(frame: CGRect(origin: .zero,
-                                        size: CGSize(width: CGFloat(viewModel.heightForHeader(at: section)),
-                                                     height: tableView.frame.width)))
+                                        size: CGSize(width: tableView.frame.width,
+                                                     height: CGFloat(viewModel.heightForHeader(at: section)))
+                                       )
+        )
         view.backgroundColor = .tableViewBackgroundColor
 
         return view

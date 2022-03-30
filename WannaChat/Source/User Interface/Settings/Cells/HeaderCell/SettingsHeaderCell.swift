@@ -24,11 +24,16 @@ class SettingsHeaderCell: UITableViewCell {
 
         profileUsernameLabel.text = user.username
         profileStatusLabel.text = user.status
-        
-        if !user.avatarLink.isEmpty {
-            FileStorage.downloadImage(imageURL: user.avatarLink) { [weak self] avatarImage in
+        setAvatar(user.avatarLink)
+    }
+    
+    private func setAvatar(_ avatarLink: String) {
+        if !avatarLink.isEmpty {
+            FileStorage.downloadImage(imageURL: avatarLink) { [weak self] avatarImage in
                 self?.profileImageView.image = avatarImage?.circleMasked
             }
+        } else {
+            self.profileImageView.image = UIImage(named: "avatar")?.circleMasked
         }
     }
 }
