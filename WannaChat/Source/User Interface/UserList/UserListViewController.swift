@@ -61,6 +61,10 @@ class UserListViewController: UIViewController {
         
         refreshControl.tintColor = .darkGray
         refreshControl.addTarget(self, action: #selector(tableViewRefreshed), for: .valueChanged)
+        
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
     }
 
     private func configureUI() { }

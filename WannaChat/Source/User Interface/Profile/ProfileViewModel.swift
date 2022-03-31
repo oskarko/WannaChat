@@ -52,7 +52,7 @@ class ProfileViewModel {
     }
     
     func heightForHeader(at section: Int) -> Int {
-        section == 0 ? 0 : 35
+        section == 0 ? 0 : 20
     }
     
     func numberOfRows(at section: Int) -> Int {
