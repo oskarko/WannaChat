@@ -6,6 +6,7 @@
 //  Copyright © 2021 Oscar R. Garrucho. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 class UserListRouter {
@@ -42,4 +43,10 @@ class UserListRouter {
     
     // MARK: - Routes
     
+    func showProfileView(for user: User) {
+        DispatchQueue.main.async { [weak self] in
+            let profileView = ProfileRouter.getViewController(for: user)
+            self?.viewController?.navigationController?.pushViewController(profileView, animated: true)
+        }
+    }
 }

@@ -53,6 +53,15 @@
 		E248F92A27EBA5E0006C0B70 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E248F92627EBA5E0006C0B70 /* EditProfileViewController.xib */; };
 		E248F92F27EBA869006C0B70 /* EditProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248F92D27EBA869006C0B70 /* EditProfileHeaderCell.swift */; };
 		E248F93027EBA869006C0B70 /* EditProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E248F92E27EBA869006C0B70 /* EditProfileHeaderCell.xib */; };
+		E24B15AA27F45F0C00CD351D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15A627F45F0C00CD351D /* ProfileRouter.swift */; };
+		E24B15AB27F45F0C00CD351D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15A727F45F0C00CD351D /* ProfileViewController.swift */; };
+		E24B15AC27F45F0C00CD351D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15A827F45F0C00CD351D /* ProfileViewModel.swift */; };
+		E24B15AD27F45F0C00CD351D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24B15A927F45F0C00CD351D /* ProfileViewController.xib */; };
+		E24B15B127F461F100CD351D /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15AF27F461F100CD351D /* ProfileHeaderCell.swift */; };
+		E24B15B227F461F100CD351D /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24B15B027F461F100CD351D /* ProfileHeaderCell.xib */; };
+		E24B15B527F468AF00CD351D /* ProfileSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15B427F468AF00CD351D /* ProfileSectionType.swift */; };
+		E24B15B727F468CE00CD351D /* ProfileHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15B627F468CE00CD351D /* ProfileHeaderType.swift */; };
+		E24B15B927F469E400CD351D /* ProfileTextType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15B827F469E400CD351D /* ProfileTextType.swift */; };
 		E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */; };
 		E258D8DC27EC45BC0084C743 /* EditProfileTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */; };
 		E258D8E027EC48F60084C743 /* EditProfileSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */; };
@@ -128,6 +137,15 @@
 		E248F92627EBA5E0006C0B70 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		E248F92D27EBA869006C0B70 /* EditProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeaderCell.swift; sourceTree = "<group>"; };
 		E248F92E27EBA869006C0B70 /* EditProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileHeaderCell.xib; sourceTree = "<group>"; };
+		E24B15A627F45F0C00CD351D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		E24B15A727F45F0C00CD351D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E24B15A827F45F0C00CD351D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E24B15A927F45F0C00CD351D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		E24B15AF27F461F100CD351D /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		E24B15B027F461F100CD351D /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
+		E24B15B427F468AF00CD351D /* ProfileSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionType.swift; sourceTree = "<group>"; };
+		E24B15B627F468CE00CD351D /* ProfileHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderType.swift; sourceTree = "<group>"; };
+		E24B15B827F469E400CD351D /* ProfileTextType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextType.swift; sourceTree = "<group>"; };
 		E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTextFieldCell.swift; sourceTree = "<group>"; };
 		E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileTextFieldCell.xib; sourceTree = "<group>"; };
 		E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSectionType.swift; sourceTree = "<group>"; };
@@ -343,6 +361,38 @@
 			path = HeaderCell;
 			sourceTree = "<group>";
 		};
+		E24B15A527F45EF900CD351D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E24B15B327F4689200CD351D /* Models */,
+				E24B15AE27F461CE00CD351D /* Cells */,
+				E24B15A627F45F0C00CD351D /* ProfileRouter.swift */,
+				E24B15A827F45F0C00CD351D /* ProfileViewModel.swift */,
+				E24B15A727F45F0C00CD351D /* ProfileViewController.swift */,
+				E24B15A927F45F0C00CD351D /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E24B15AE27F461CE00CD351D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E24B15AF27F461F100CD351D /* ProfileHeaderCell.swift */,
+				E24B15B027F461F100CD351D /* ProfileHeaderCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E24B15B327F4689200CD351D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E24B15B427F468AF00CD351D /* ProfileSectionType.swift */,
+				E24B15B627F468CE00CD351D /* ProfileHeaderType.swift */,
+				E24B15B827F469E400CD351D /* ProfileTextType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E258D8DD27EC45C50084C743 /* TextFieldCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +466,7 @@
 		E264982C27E4D155009D28B3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				E24B15A527F45EF900CD351D /* Profile */,
 				E20C30C727F1EFCE00CB7D3B /* Status */,
 				E248F92227EBA5CC006C0B70 /* EditProfile */,
 				E244ECD127EAEF03007724C8 /* Settings */,
@@ -564,10 +615,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B15AD27F45F0C00CD351D /* ProfileViewController.xib in Resources */,
 				E264982227E4C66B009D28B3 /* LaunchScreen.storyboard in Resources */,
 				E244ECF127EAEF5B007724C8 /* SettingsViewController.xib in Resources */,
 				E264982A27E4C9C1009D28B3 /* GoogleService-Info.plist in Resources */,
 				E20C30CF27F1EFE000CB7D3B /* StatusViewController.xib in Resources */,
+				E24B15B227F461F100CD351D /* ProfileHeaderCell.xib in Resources */,
 				E244ED0027EB3CD1007724C8 /* SettingsHeaderCell.xib in Resources */,
 				E244ECD927EAEF25007724C8 /* ChatListViewController.xib in Resources */,
 				E244ED0F27EB46B2007724C8 /* SettingsTextCell.xib in Resources */,
@@ -639,6 +692,7 @@
 				E239E7EF27ECDEB500D13428 /* String+Ext.swift in Sources */,
 				E244ECE827EAEF4D007724C8 /* UserListViewModel.swift in Sources */,
 				E20C30CC27F1EFE000CB7D3B /* StatusRouter.swift in Sources */,
+				E24B15AB27F45F0C00CD351D /* ProfileViewController.swift in Sources */,
 				E2B1C9F327EB6D0400148566 /* UIViewController+Ext.swift in Sources */,
 				E264983427E4D17F009D28B3 /* AuthViewModel.swift in Sources */,
 				E244ED0327EB41DB007724C8 /* SettingsButtonCell.swift in Sources */,
@@ -648,6 +702,7 @@
 				E20C30C427F1EA8200CB7D3B /* UIImage+Ext.swift in Sources */,
 				E2441A8627EA075300A1D34E /* MainViewController.swift in Sources */,
 				E258D8E227EC490A0084C743 /* EditProfileHeaderType.swift in Sources */,
+				E24B15B527F468AF00CD351D /* ProfileSectionType.swift in Sources */,
 				E2441A7F27E9E22B00A1D34E /* HUDMessageType.swift in Sources */,
 				E239E7ED27ECC1F300D13428 /* FileStorage.swift in Sources */,
 				E2441A8727EA075300A1D34E /* MainViewModel.swift in Sources */,
@@ -655,25 +710,30 @@
 				E25A153027E8578100AD4E12 /* FirebaseUserListener.swift in Sources */,
 				E264983327E4D17F009D28B3 /* AuthViewController.swift in Sources */,
 				E244ECF027EAEF5B007724C8 /* SettingsViewModel.swift in Sources */,
+				E24B15B727F468CE00CD351D /* ProfileHeaderType.swift in Sources */,
 				E244ECFF27EB3CD1007724C8 /* SettingsHeaderCell.swift in Sources */,
 				E248F92727EBA5E0006C0B70 /* EditProfileRouter.swift in Sources */,
 				E244ECD627EAEF25007724C8 /* ChatListRouter.swift in Sources */,
 				E248F92127EBA3F9006C0B70 /* UIApplication+Ext.swift in Sources */,
 				E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */,
 				E244ED0727EB41F0007724C8 /* SettingsLogOutCell.swift in Sources */,
+				E24B15AC27F45F0C00CD351D /* ProfileViewModel.swift in Sources */,
 				E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */,
 				E244ED0B27EB44C3007724C8 /* UIView+Ext.swift in Sources */,
 				E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */,
+				E24B15AA27F45F0C00CD351D /* ProfileRouter.swift in Sources */,
 				E248F92F27EBA869006C0B70 /* EditProfileHeaderCell.swift in Sources */,
 				E244ECDE27EAEF40007724C8 /* ChannelListRouter.swift in Sources */,
 				E244ECD827EAEF25007724C8 /* ChatListViewModel.swift in Sources */,
 				E244ECE027EAEF40007724C8 /* ChannelListViewModel.swift in Sources */,
+				E24B15B927F469E400CD351D /* ProfileTextType.swift in Sources */,
 				E244ECE727EAEF4D007724C8 /* UserListViewController.swift in Sources */,
 				E248F92827EBA5E0006C0B70 /* EditProfileViewController.swift in Sources */,
 				E264983E27E50C0C009D28B3 /* Constants.swift in Sources */,
 				E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
 				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,
+				E24B15B127F461F100CD351D /* ProfileHeaderCell.swift in Sources */,
 				E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */,
 				E258D8E027EC48F60084C743 /* EditProfileSectionType.swift in Sources */,
 				E248F92927EBA5E0006C0B70 /* EditProfileViewModel.swift in Sources */,

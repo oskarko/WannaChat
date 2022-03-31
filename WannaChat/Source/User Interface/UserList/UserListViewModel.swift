@@ -47,7 +47,9 @@ class UserListViewModel: NSObject {
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        
+        if let user = getUser(at: indexPath) {
+            router?.showProfileView(for: user)
+        }
     }
     
     func tableViewRefreshed() {

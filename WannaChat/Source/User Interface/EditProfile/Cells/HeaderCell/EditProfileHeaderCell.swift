@@ -38,10 +38,18 @@ class EditProfileHeaderCell: UITableViewCell {
     // MARK: - Helpers
     
     func configure(with user: User?) {
-        guard let avatarLink = user?.avatarLink, !avatarLink.isEmpty else { return }
-
-        FileStorage.downloadImage(imageURL: avatarLink) { [weak self] avatarImage in
-            self?.avatarImageView.image = avatarImage?.circleMasked
+        guard let user = user else { return }
+        
+        setAvatar(user.avatarLink)
+    }
+    
+    private func setAvatar(_ avatarLink: String) {
+        if !avatarLink.isEmpty {
+            FileStorage.downloadImage(imageURL: avatarLink) { [weak self] avatarImage in
+                self?.avatarImageView.image = avatarImage?.circleMasked
+            }
+        } else {
+            self.avatarImageView.image = UIImage(named: "avatar")?.circleMasked
         }
     }
 }

@@ -26,21 +26,20 @@ class StatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureUI()
         configureTableView()
+        configureUI()
     }
     
     // MARK: - Helpers
 
-    private func configureUI() {
-        title = "Status"
-    }
-    
     private func configureTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView()
     }
     
+    private func configureUI() {
+        title = "Status"
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate

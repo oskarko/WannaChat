@@ -57,9 +57,8 @@ class UserListViewController: UIViewController {
     private func configureTableView() {
         tableView.register(SettingsHeaderCell.nib, forCellReuseIdentifier: SettingsHeaderCell.identifier)
         tableView.tableFooterView = UIView()
-        tableView.addSubview(refreshControl)
+        tableView.refreshControl = refreshControl
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.tintColor = .darkGray
         refreshControl.addTarget(self, action: #selector(tableViewRefreshed), for: .valueChanged)
     }
