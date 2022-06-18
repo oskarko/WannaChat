@@ -34,6 +34,7 @@ class UserListViewController: UIViewController {
         configureSearchController()
         configureTableView()
         configureUI()
+        viewModel.viewDidLoad()
     }
     
     // MARK: - Selectors

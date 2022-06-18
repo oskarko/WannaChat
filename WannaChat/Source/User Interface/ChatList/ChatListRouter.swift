@@ -49,4 +49,10 @@ class ChatListRouter {
         }
         print("Open ChatView")
     }
+    
+    func newChatButtonTapped() {
+        let userListView = UserListRouter.getViewController()
+        viewController?.navigationController?.pushViewController(userListView, animated: true)
+    }
+    
 }

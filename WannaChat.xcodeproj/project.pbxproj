@@ -86,6 +86,8 @@
 		E2771030285E0D210094A1DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277102F285E0D210094A1DA /* Date+Ext.swift */; };
 		E2771032285E186F0094A1DA /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771031285E186F0094A1DA /* StartChat.swift */; };
 		E2771034285E1A830094A1DA /* FirebaseRecentChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771033285E1A830094A1DA /* FirebaseRecentChatListener.swift */; };
+		E2771037285E7A920094A1DA /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771036285E7A920094A1DA /* MessageType.swift */; };
+		E2771039285E7E170094A1DA /* UIBarButtonItem+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771038285E7E170094A1DA /* UIBarButtonItem+Ext.swift */; };
 		E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */; };
 		E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */; };
 		E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */; };
@@ -178,6 +180,8 @@
 		E277102F285E0D210094A1DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		E2771031285E186F0094A1DA /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
 		E2771033285E1A830094A1DA /* FirebaseRecentChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentChatListener.swift; sourceTree = "<group>"; };
+		E2771036285E7A920094A1DA /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		E2771038285E7E170094A1DA /* UIBarButtonItem+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Ext.swift"; sourceTree = "<group>"; };
 		E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionType.swift; sourceTree = "<group>"; };
 		E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderType.swift; sourceTree = "<group>"; };
 		E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonType.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 		E244ECCE27EAEED3007724C8 /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
+				E2771035285E7A810094A1DA /* Models */,
 				E2771028285E04FF0094A1DA /* Cells */,
 				E244ECD227EAEF25007724C8 /* ChatListRouter.swift */,
 				E244ECD427EAEF25007724C8 /* ChatListViewModel.swift */,
@@ -300,6 +305,7 @@
 				E277102F285E0D210094A1DA /* Date+Ext.swift */,
 				E239E7EE27ECDEB500D13428 /* String+Ext.swift */,
 				E248F92027EBA3F9006C0B70 /* UIApplication+Ext.swift */,
+				E2771038285E7E170094A1DA /* UIBarButtonItem+Ext.swift */,
 				E2B1C9F427EB6E6600148566 /* UIColor+Ext.swift */,
 				E20C30C327F1EA8200CB7D3B /* UIImage+Ext.swift */,
 				E244ED0A27EB44C3007724C8 /* UIView+Ext.swift */,
@@ -561,6 +567,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		E2771035285E7A810094A1DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2771036285E7A920094A1DA /* MessageType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E2B1C9E927EB491E00148566 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,10 +760,12 @@
 				E248F92127EBA3F9006C0B70 /* UIApplication+Ext.swift in Sources */,
 				E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */,
 				E244ED0727EB41F0007724C8 /* SettingsLogOutCell.swift in Sources */,
+				E2771037285E7A920094A1DA /* MessageType.swift in Sources */,
 				E24B15AC27F45F0C00CD351D /* ProfileViewModel.swift in Sources */,
 				E2771030285E0D210094A1DA /* Date+Ext.swift in Sources */,
 				E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */,
 				E244ED0B27EB44C3007724C8 /* UIView+Ext.swift in Sources */,
+				E2771039285E7E170094A1DA /* UIBarButtonItem+Ext.swift in Sources */,
 				E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */,
 				E24B15AA27F45F0C00CD351D /* ProfileRouter.swift in Sources */,
 				E248F92F27EBA869006C0B70 /* EditProfileHeaderCell.swift in Sources */,

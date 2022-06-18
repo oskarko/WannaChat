@@ -53,6 +53,28 @@ class ChatListViewModel: NSObject {
         let recentChat = isSearchMode ? filteredRecents[indexPath.row] : allRecents[indexPath.row]
         router?.showChatView()
     }
+    
+    func deleteChat(at indexPath: IndexPath) {
+        let recentChat = isSearchMode ? filteredRecents[indexPath.row] : allRecents[indexPath.row]
+        
+        FirebaseRecentChatListener.shared.deleteRecentChat(recentChat) { [weak self] error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.view?.show(message: error.localizedDescription, type: .error)
+            } else {
+                _ = self.isSearchMode ?
+                self.filteredRecents.remove(at: indexPath.row) :
+                self.allRecents.remove(at: indexPath.row)
+                
+                self.view?.deleteRows(at: [indexPath])
+            }
+        }
+    }
+    
+    func newChatButtonTapped() {
+        router?.newChatButtonTapped()
+    }
 }
 
 // MARK: - UISearchResultsUpdating

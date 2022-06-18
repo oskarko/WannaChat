@@ -22,17 +22,13 @@ class UserListViewModel: NSObject {
         !filteredUsers.isEmpty
     }
     
-    // MARK: - Lifecycle
+    // MARK: - Helpers
     
-    override init() {
-        super.init()
-        
-        downloadUsers {
-            print("Downloading user on init")
+    func viewDidLoad() {
+        downloadUsers { [weak self] in
+            self?.view?.reloadData()
         }
     }
-    
-    // MARK: - Helpers
     
     func numberOfRows() -> Int {
         isSearchMode ? filteredUsers.count : allUsers.count

@@ -43,7 +43,7 @@ class MainViewController: UITabBarController {
     }()
     
     private lazy var userListView: UINavigationController = {
-        let userListView = UserListRouter.getViewController()
+        let userListView = UserListRouter.getNavController()
         let tab2 = UITabBarItem(
             title: "Users",
             image: UIImage(systemName: "person.2"),

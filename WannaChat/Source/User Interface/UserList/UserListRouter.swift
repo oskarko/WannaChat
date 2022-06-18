@@ -17,7 +17,13 @@ class UserListRouter {
 
     // MARK: - Helpers
     
-    static func getViewController() -> UINavigationController {
+    static func getViewController() -> UserListViewController {
+        let configuration = configureModule()
+
+        return configuration.vc
+    }
+    
+    static func getNavController() -> UINavigationController {
         let configuration = configureModule()
 
         //return configuration.vc

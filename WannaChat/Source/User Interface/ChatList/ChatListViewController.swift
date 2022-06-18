@@ -10,6 +10,8 @@ import UIKit
 
 protocol ChatListViewControllerProtocol: AnyObject {
     func reloadData()
+    func deleteRows(at indexPaths: [IndexPath])
+    func show(message: String, type: MessageType)
 }
 
 class ChatListViewController: UIViewController {
@@ -26,7 +28,7 @@ class ChatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureNavigationBar(withTitle: "Chats", prefersLargeTitles: true)
+        setupNavigationController()
         configureSearchController()
         configureTableView()
         configureUI()
@@ -36,8 +38,18 @@ class ChatListViewController: UIViewController {
 
     // MARK: - Selectors
 
+    @objc func newChatButtonTapped() {
+        viewModel.newChatButtonTapped()
+    }
     
     // MARK: - Helpers
+    
+    fileprivate func setupNavigationController() {
+        configureNavigationBar(withTitle: "Chats", prefersLargeTitles: true)
+        navigationItem.rightBarButtonItems = [
+            .newChatButton(self, #selector(newChatButtonTapped)),
+        ]
+    }
     
     private func configureSearchController() {
         navigationItem.searchController = searchController
@@ -73,11 +85,33 @@ extension ChatListViewController: ChatListViewControllerProtocol {
             self.tableView.reloadData()
         }
     }
+    
+    func deleteRows(at indexPaths: [IndexPath]) {
+        DispatchQueue.main.async {
+            self.tableView.deleteRows(at: indexPaths, with: .automatic)
+        }
+    }
+    
+    func show(message: String, type: MessageType) {
+        DispatchQueue.main.async {
+            print("Show Message: ", message)
+            print("Show Message Type: ", type)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(origin: .zero,
+                                        size: CGSize(width: tableView.frame.width, height: 10)))
+        view.backgroundColor = .tableViewBackgroundColor
+
+        return view
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRows(in: section)
     }
@@ -105,6 +139,18 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            viewModel.deleteChat(at: indexPath)
+        }
     }
     
 }

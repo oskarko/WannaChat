@@ -60,4 +60,12 @@ class FirebaseRecentChatListener {
                 completion(recentChats)
         }
     }
+    
+    // MARK: - Delete RecentChat
+    
+    func deleteRecentChat(_ recentChat: RecentChat, completion: @escaping (Error?) -> Void) {
+        firebaseReference(.recent).document(recentChat.id).delete { error in
+            completion(error)
+        }
+    }
 }
