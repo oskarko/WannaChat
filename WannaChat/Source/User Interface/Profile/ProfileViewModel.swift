@@ -78,7 +78,16 @@ class ProfileViewModel {
         
         switch sectionType {
         case .header: break
-        case .text: router?.showNewChatView()
+        case .text: startChat()
+        }
+    }
+    
+    private func startChat() {
+        if let currentUser = User.currentUser {
+            let chatId = WannaChat.startChat(user1: currentUser, user2: user)
+            print("Start chatting in chatRoomId: ", chatId)
+            
+            // router?.showNewChatView()
         }
     }
 }

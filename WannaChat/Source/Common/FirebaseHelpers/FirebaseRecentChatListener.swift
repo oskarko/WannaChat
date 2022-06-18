@@ -26,4 +26,38 @@ class FirebaseRecentChatListener {
         }
         
     }
+    
+    // MARK: - Download all recent chats
+    
+    func downloadRecentChatsFromFirestore(completion: @escaping (_ allRecents: [RecentChat]) -> Void) {
+        guard let currentUserId = User.currentId else {
+            completion([])
+            return
+        }
+        
+        firebaseReference(.recent).whereField(kSENDERID, isEqualTo: currentUserId)
+            .addSnapshotListener { querySnapshot, error in
+            
+                var recentChats: [RecentChat] = []
+                
+                guard let documents = querySnapshot?.documents else {
+                    print("no documents for recent chats")
+                    completion([])
+                    return
+                }
+                
+                let allRecents = documents.compactMap { queryDocumentSnapshot in
+                    return try? queryDocumentSnapshot.data(as: RecentChat.self)
+                }
+                
+                for recent in allRecents {
+                    if !recent.lastMessage.isEmpty {
+                        recentChats.append(recent)
+                    }
+                }
+                
+                recentChats.sort(by: { $0.date! > $1.date! })
+                completion(recentChats)
+        }
+    }
 }

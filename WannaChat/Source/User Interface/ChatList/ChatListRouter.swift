@@ -42,4 +42,11 @@ class ChatListRouter {
     
     // MARK: - Routes
     
+    func showChatView() {
+        DispatchQueue.main.async { [weak self] in
+//            let statusView = StatusRouter.getViewController()
+//            self?.viewController?.navigationController?.pushViewController(statusView, animated: true)
+        }
+        print("Open ChatView")
+    }
 }

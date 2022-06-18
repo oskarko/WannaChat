@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ChatListViewControllerProtocol: AnyObject {
-
+    func reloadData()
 }
 
 class ChatListViewController: UIViewController {
@@ -17,6 +17,7 @@ class ChatListViewController: UIViewController {
     // MARK: - Properties
     
     var viewModel: ChatListViewModel!
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,8 +26,11 @@ class ChatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureNavigationBar(withTitle: "Chats", prefersLargeTitles: true)
+        configureSearchController()
         configureTableView()
         configureUI()
+        viewModel.viewDidLoad()
     }
     
 
@@ -34,6 +38,16 @@ class ChatListViewController: UIViewController {
 
     
     // MARK: - Helpers
+    
+    private func configureSearchController() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search chat"
+        searchController.searchResultsUpdater = viewModel
+        definesPresentationContext = true
+    }
     
     private func configureTableView() {
         tableView.register(ChatCell.nib, forCellReuseIdentifier: ChatCell.identifier)
@@ -54,7 +68,11 @@ class ChatListViewController: UIViewController {
 // MARK: - ChatListViewControllerProtocol
 
 extension ChatListViewController: ChatListViewControllerProtocol {
-
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
@@ -75,7 +93,7 @@ extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        //cell.configure(with: viewModel.getUser(at: indexPath))
+        cell.configure(with: viewModel.getRecentChat(at: indexPath))
         cell.selectionStyle = .none
 
         return cell
