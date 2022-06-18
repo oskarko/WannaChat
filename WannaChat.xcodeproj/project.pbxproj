@@ -84,6 +84,8 @@
 		E277102D285E07190094A1DA /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277102B285E07190094A1DA /* ChatCell.swift */; };
 		E277102E285E07190094A1DA /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E277102C285E07190094A1DA /* ChatCell.xib */; };
 		E2771030285E0D210094A1DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277102F285E0D210094A1DA /* Date+Ext.swift */; };
+		E2771032285E186F0094A1DA /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771031285E186F0094A1DA /* StartChat.swift */; };
+		E2771034285E1A830094A1DA /* FirebaseRecentChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771033285E1A830094A1DA /* FirebaseRecentChatListener.swift */; };
 		E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */; };
 		E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */; };
 		E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */; };
@@ -174,6 +176,8 @@
 		E277102B285E07190094A1DA /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		E277102C285E07190094A1DA /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		E277102F285E0D210094A1DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		E2771031285E186F0094A1DA /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
+		E2771033285E1A830094A1DA /* FirebaseRecentChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentChatListener.swift; sourceTree = "<group>"; };
 		E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionType.swift; sourceTree = "<group>"; };
 		E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderType.swift; sourceTree = "<group>"; };
 		E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonType.swift; sourceTree = "<group>"; };
@@ -426,8 +430,9 @@
 			isa = PBXGroup;
 			children = (
 				E25A152C27E8567900AD4E12 /* FCollectionReference.swift */,
-				E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */,
 				E239E7EC27ECC1F300D13428 /* FileStorage.swift */,
+				E2771033285E1A830094A1DA /* FirebaseRecentChatListener.swift */,
+				E25A152F27E8578100AD4E12 /* FirebaseUserListener.swift */,
 			);
 			path = FirebaseHelpers;
 			sourceTree = "<group>";
@@ -542,6 +547,7 @@
 			isa = PBXGroup;
 			children = (
 				E264983D27E50C0C009D28B3 /* Constants.swift */,
+				E2771031285E186F0094A1DA /* StartChat.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -713,6 +719,7 @@
 				E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */,
 				E239E7EF27ECDEB500D13428 /* String+Ext.swift in Sources */,
 				E244ECE827EAEF4D007724C8 /* UserListViewModel.swift in Sources */,
+				E2771034285E1A830094A1DA /* FirebaseRecentChatListener.swift in Sources */,
 				E20C30CC27F1EFE000CB7D3B /* StatusRouter.swift in Sources */,
 				E24B15AB27F45F0C00CD351D /* ProfileViewController.swift in Sources */,
 				E2B1C9F327EB6D0400148566 /* UIViewController+Ext.swift in Sources */,
@@ -756,6 +763,7 @@
 				E277102D285E07190094A1DA /* ChatCell.swift in Sources */,
 				E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
+				E2771032285E186F0094A1DA /* StartChat.swift in Sources */,
 				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,
 				E24B15B127F461F100CD351D /* ProfileHeaderCell.swift in Sources */,
 				E2441A8527EA075300A1D34E /* MainRouter.swift in Sources */,

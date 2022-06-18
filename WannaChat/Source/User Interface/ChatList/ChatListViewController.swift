@@ -36,7 +36,7 @@ class ChatListViewController: UIViewController {
     // MARK: - Helpers
     
     private func configureTableView() {
-
+        tableView.register(ChatCell.nib, forCellReuseIdentifier: ChatCell.identifier)
         tableView.tableFooterView = UIView()
         
         if #available(iOS 15.0, *) {
@@ -55,4 +55,38 @@ class ChatListViewController: UIViewController {
 
 extension ChatListViewController: ChatListViewControllerProtocol {
 
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
+extension ChatListViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRows(in: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: ChatCell.identifier,
+                for: indexPath
+            ) as? ChatCell
+        else {
+            assertionFailure("Could not deque cell")
+            return UITableViewCell()
+        }
+
+        //cell.configure(with: viewModel.getUser(at: indexPath))
+        cell.selectionStyle = .none
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        viewModel.heightForRow(at: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath)
+    }
+    
 }

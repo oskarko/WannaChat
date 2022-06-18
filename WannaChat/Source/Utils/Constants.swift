@@ -11,3 +11,5 @@ import Foundation
 
 public let kFILEREFERENCE = "gs://wannachat-96e92.appspot.com"
 public let kCURRENTUSER = "currentUser"
+public let kCHATROOMID = "chatRoomId"
+public let kSENDERID = "senderId"

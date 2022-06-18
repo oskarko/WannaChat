@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ChatListViewModel {
     
@@ -17,4 +18,15 @@ class ChatListViewModel {
     
     // MARK: - Helpers
     
+    func numberOfRows(in section: Int) -> Int {
+        0
+    }
+    
+    func heightForRow(at indexPath: IndexPath) -> CGFloat {
+        85
+    }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        
+    }
 }
