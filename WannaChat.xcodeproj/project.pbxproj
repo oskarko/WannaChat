@@ -80,6 +80,10 @@
 		E264983527E4D17F009D28B3 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E264983127E4D17E009D28B3 /* AuthViewController.xib */; };
 		E264983B27E508F6009D28B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983A27E508F6009D28B3 /* User.swift */; };
 		E264983E27E50C0C009D28B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264983D27E50C0C009D28B3 /* Constants.swift */; };
+		E2771027285E02700094A1DA /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2771026285E02700094A1DA /* RecentChat.swift */; };
+		E277102D285E07190094A1DA /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277102B285E07190094A1DA /* ChatCell.swift */; };
+		E277102E285E07190094A1DA /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E277102C285E07190094A1DA /* ChatCell.xib */; };
+		E2771030285E0D210094A1DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277102F285E0D210094A1DA /* Date+Ext.swift */; };
 		E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */; };
 		E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */; };
 		E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */; };
@@ -166,6 +170,10 @@
 		E264983127E4D17E009D28B3 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		E264983A27E508F6009D28B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E264983D27E50C0C009D28B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E2771026285E02700094A1DA /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
+		E277102B285E07190094A1DA /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		E277102C285E07190094A1DA /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		E277102F285E0D210094A1DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		E2B1C9EA27EB493800148566 /* SettingsSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionType.swift; sourceTree = "<group>"; };
 		E2B1C9EC27EB595D00148566 /* SettingsHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderType.swift; sourceTree = "<group>"; };
 		E2B1C9EE27EB596C00148566 /* SettingsButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonType.swift; sourceTree = "<group>"; };
@@ -227,6 +235,7 @@
 		E244ECCE27EAEED3007724C8 /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
+				E2771028285E04FF0094A1DA /* Cells */,
 				E244ECD227EAEF25007724C8 /* ChatListRouter.swift */,
 				E244ECD427EAEF25007724C8 /* ChatListViewModel.swift */,
 				E244ECD327EAEF25007724C8 /* ChatListViewController.swift */,
@@ -284,12 +293,13 @@
 		E244ED0927EB44B6007724C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E277102F285E0D210094A1DA /* Date+Ext.swift */,
+				E239E7EE27ECDEB500D13428 /* String+Ext.swift */,
 				E248F92027EBA3F9006C0B70 /* UIApplication+Ext.swift */,
 				E2B1C9F427EB6E6600148566 /* UIColor+Ext.swift */,
+				E20C30C327F1EA8200CB7D3B /* UIImage+Ext.swift */,
 				E244ED0A27EB44C3007724C8 /* UIView+Ext.swift */,
 				E2B1C9F227EB6D0400148566 /* UIViewController+Ext.swift */,
-				E239E7EE27ECDEB500D13428 /* String+Ext.swift */,
-				E20C30C327F1EA8200CB7D3B /* UIImage+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +533,7 @@
 			children = (
 				E264983A27E508F6009D28B3 /* User.swift */,
 				E20C30C527F1EE1400CB7D3B /* Status.swift */,
+				E2771026285E02700094A1DA /* RecentChat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -533,6 +544,15 @@
 				E264983D27E50C0C009D28B3 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E2771028285E04FF0094A1DA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E277102B285E07190094A1DA /* ChatCell.swift */,
+				E277102C285E07190094A1DA /* ChatCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E2B1C9E927EB491E00148566 /* Models */ = {
@@ -632,6 +652,7 @@
 				E248F92A27EBA5E0006C0B70 /* EditProfileViewController.xib in Resources */,
 				E244ECE927EAEF4D007724C8 /* UserListViewController.xib in Resources */,
 				E258D8DC27EC45BC0084C743 /* EditProfileTextFieldCell.xib in Resources */,
+				E277102E285E07190094A1DA /* ChatCell.xib in Resources */,
 				E264981F27E4C66B009D28B3 /* Assets.xcassets in Resources */,
 				E244ECE127EAEF40007724C8 /* ChannelListViewController.xib in Resources */,
 			);
@@ -686,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2771027285E02700094A1DA /* RecentChat.swift in Sources */,
 				E20C30CE27F1EFE000CB7D3B /* StatusViewModel.swift in Sources */,
 				E264981627E4C669009D28B3 /* AppDelegate.swift in Sources */,
 				E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */,
@@ -718,6 +740,7 @@
 				E2B1C9EF27EB596C00148566 /* SettingsButtonType.swift in Sources */,
 				E244ED0727EB41F0007724C8 /* SettingsLogOutCell.swift in Sources */,
 				E24B15AC27F45F0C00CD351D /* ProfileViewModel.swift in Sources */,
+				E2771030285E0D210094A1DA /* Date+Ext.swift in Sources */,
 				E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */,
 				E244ED0B27EB44C3007724C8 /* UIView+Ext.swift in Sources */,
 				E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */,
@@ -730,6 +753,7 @@
 				E244ECE727EAEF4D007724C8 /* UserListViewController.swift in Sources */,
 				E248F92827EBA5E0006C0B70 /* EditProfileViewController.swift in Sources */,
 				E264983E27E50C0C009D28B3 /* Constants.swift in Sources */,
+				E277102D285E07190094A1DA /* ChatCell.swift in Sources */,
 				E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
 				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,

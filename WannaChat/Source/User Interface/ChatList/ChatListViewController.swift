@@ -18,12 +18,14 @@ class ChatListViewController: UIViewController {
     
     var viewModel: ChatListViewModel!
     
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
         configureUI()
     }
     
@@ -32,9 +34,18 @@ class ChatListViewController: UIViewController {
 
     
     // MARK: - Helpers
+    
+    private func configureTableView() {
+
+        tableView.tableFooterView = UIView()
+        
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
+    }
+
 
     private func configureUI() {
-        view.backgroundColor = .systemGreen
 
     }
     
