@@ -107,3 +107,7 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,cocoapods,xcode
+IDEWorkspaceChecks.plist
+contents.xcworkspacedata
+Podfile.lock
+GoogleService-Info.plist

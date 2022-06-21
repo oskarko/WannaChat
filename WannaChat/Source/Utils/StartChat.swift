@@ -17,6 +17,14 @@ func startChat(user1: User, user2: User) -> String {
     return chatRoomId
 }
 
+func restartChat(chatRoomId: String, membersId: [String]) {
+    FirebaseUserListener.shared.downloadUsersFromFirebase(withIds: membersId) { allUsers in
+        if !allUsers.isEmpty {
+            createRecentItems(from: chatRoomId, users: allUsers)
+        }
+    }
+}
+
 func chatRoomIdFrom(user1Id: String, user2Id: String) -> String {
     let value = user1Id.compare(user2Id).rawValue
     let chatRoomId = value < 0 ? (user1Id + user2Id) : (user2Id + user1Id)
@@ -58,7 +66,7 @@ func createRecentItems(from chatRoomId: String, users: [User]) {
                                               unreadCounter: 0,
                                               avatarLink: receiverUser.avatarLink)
                 
-                FirebaseRecentChatListener.shared.addRecentChat(recentObject)
+                FirebaseRecentChatListener.shared.saveRecentChat(recentObject)
             }
             
     }

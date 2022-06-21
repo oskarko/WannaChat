@@ -39,7 +39,7 @@ class ProfileViewController: UIViewController {
     
     private func configureNavigationItem() {
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.title = "Profile"
+        navigationItem.title = viewModel.getUser().username
     }
 
     private func configureTableView() {

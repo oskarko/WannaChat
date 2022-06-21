@@ -51,7 +51,13 @@ class ChatListViewModel: NSObject {
     
     func didSelectRow(at indexPath: IndexPath) {
         let recentChat = isSearchMode ? filteredRecents[indexPath.row] : allRecents[indexPath.row]
-        router?.showChatView()
+        
+        FirebaseRecentChatListener.shared.clearUnreadCounter(recentChat)
+        // We need to restart the chat,
+        // just in case the other person has deleted it.
+        restartChat(chatRoomId: recentChat.chatRoomId, membersId: recentChat.memberIds)
+        
+        router?.showChatView(for: recentChat)
     }
     
     func deleteChat(at indexPath: IndexPath) {

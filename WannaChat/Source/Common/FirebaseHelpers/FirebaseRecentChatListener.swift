@@ -16,9 +16,34 @@ class FirebaseRecentChatListener {
     
     private init() { }
     
+    
+    // MARK: - Clear/Reset Unread
+    
+    func clearUnreadCounter(_ recent: RecentChat) {
+        var newRecent = recent
+        newRecent.unreadCounter = 0
+        saveRecentChat(newRecent)
+    }
+    
+    func resetRecentCounter(chatRoomId: String) {
+        guard let currentId = User.currentId else { return }
+        
+        firebaseReference(.recent).whereField(kCHATROOMID, isEqualTo: chatRoomId).whereField(kSENDERID, isEqualTo: currentId).getDocuments { [weak self] querySnapshot, error in
+            guard let self = self, let documents = querySnapshot?.documents else { return }
+            
+            let allRecents = documents.compactMap { queryDocumentSnapshot in
+                return try? queryDocumentSnapshot.data(as: RecentChat.self)
+            }
+            
+            if let firstRecent = allRecents.first {
+                self.clearUnreadCounter(firstRecent)
+            }
+        }
+    }
+    
     // MARK: - Add recent chats
     
-    func addRecentChat(_ recent: RecentChat) {
+    func saveRecentChat(_ recent: RecentChat) {
         do {
             try firebaseReference(.recent).document(recent.id).setData(from: recent)
         } catch {

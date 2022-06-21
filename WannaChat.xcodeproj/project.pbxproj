@@ -62,6 +62,9 @@
 		E24B15B527F468AF00CD351D /* ProfileSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15B427F468AF00CD351D /* ProfileSectionType.swift */; };
 		E24B15B727F468CE00CD351D /* ProfileHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15B627F468CE00CD351D /* ProfileHeaderType.swift */; };
 		E24B15B927F469E400CD351D /* ProfileTextType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B15B827F469E400CD351D /* ProfileTextType.swift */; };
+		E24DF33928620A43004C6DB6 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DF33528620A43004C6DB6 /* ChatRouter.swift */; };
+		E24DF33A28620A43004C6DB6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DF33628620A43004C6DB6 /* ChatViewController.swift */; };
+		E24DF33B28620A43004C6DB6 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DF33728620A43004C6DB6 /* ChatViewModel.swift */; };
 		E258D8DB27EC45BC0084C743 /* EditProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */; };
 		E258D8DC27EC45BC0084C743 /* EditProfileTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */; };
 		E258D8E027EC48F60084C743 /* EditProfileSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */; };
@@ -154,6 +157,9 @@
 		E24B15B427F468AF00CD351D /* ProfileSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionType.swift; sourceTree = "<group>"; };
 		E24B15B627F468CE00CD351D /* ProfileHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderType.swift; sourceTree = "<group>"; };
 		E24B15B827F469E400CD351D /* ProfileTextType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextType.swift; sourceTree = "<group>"; };
+		E24DF33528620A43004C6DB6 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		E24DF33628620A43004C6DB6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E24DF33728620A43004C6DB6 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		E258D8D927EC45BC0084C743 /* EditProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTextFieldCell.swift; sourceTree = "<group>"; };
 		E258D8DA27EC45BC0084C743 /* EditProfileTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileTextFieldCell.xib; sourceTree = "<group>"; };
 		E258D8DF27EC48F60084C743 /* EditProfileSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSectionType.swift; sourceTree = "<group>"; };
@@ -413,6 +419,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E24DF33428620A30004C6DB6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E24DF33528620A43004C6DB6 /* ChatRouter.swift */,
+				E24DF33728620A43004C6DB6 /* ChatViewModel.swift */,
+				E24DF33628620A43004C6DB6 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		E258D8DD27EC45C50084C743 /* TextFieldCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +510,7 @@
 				E244ECD027EAEEFB007724C8 /* UserList */,
 				E244ECCF27EAEEDA007724C8 /* ChannelList */,
 				E244ECCE27EAEED3007724C8 /* ChatList */,
+				E24DF33428620A30004C6DB6 /* Chat */,
 				E2441A8027EA073500A1D34E /* Main */,
 				E264982D27E4D15D009D28B3 /* Authentication */,
 			);
@@ -764,6 +781,7 @@
 				E24B15AC27F45F0C00CD351D /* ProfileViewModel.swift in Sources */,
 				E2771030285E0D210094A1DA /* Date+Ext.swift in Sources */,
 				E2B1C9ED27EB595D00148566 /* SettingsHeaderType.swift in Sources */,
+				E24DF33928620A43004C6DB6 /* ChatRouter.swift in Sources */,
 				E244ED0B27EB44C3007724C8 /* UIView+Ext.swift in Sources */,
 				E2771039285E7E170094A1DA /* UIBarButtonItem+Ext.swift in Sources */,
 				E244ECD727EAEF25007724C8 /* ChatListViewController.swift in Sources */,
@@ -778,6 +796,7 @@
 				E264983E27E50C0C009D28B3 /* Constants.swift in Sources */,
 				E277102D285E07190094A1DA /* ChatCell.swift in Sources */,
 				E2B1C9EB27EB493800148566 /* SettingsSectionType.swift in Sources */,
+				E24DF33B28620A43004C6DB6 /* ChatViewModel.swift in Sources */,
 				E264983227E4D17F009D28B3 /* AuthRouter.swift in Sources */,
 				E2771032285E186F0094A1DA /* StartChat.swift in Sources */,
 				E25A152D27E8567900AD4E12 /* FCollectionReference.swift in Sources */,
@@ -788,6 +807,7 @@
 				E20C30CD27F1EFE000CB7D3B /* StatusViewController.swift in Sources */,
 				E264981827E4C669009D28B3 /* SceneDelegate.swift in Sources */,
 				E244ECEE27EAEF5B007724C8 /* SettingsRouter.swift in Sources */,
+				E24DF33A28620A43004C6DB6 /* ChatViewController.swift in Sources */,
 				E244ECE627EAEF4D007724C8 /* UserListRouter.swift in Sources */,
 				E244ECEF27EAEF5B007724C8 /* SettingsViewController.swift in Sources */,
 				E2B1C9F527EB6E6600148566 /* UIColor+Ext.swift in Sources */,

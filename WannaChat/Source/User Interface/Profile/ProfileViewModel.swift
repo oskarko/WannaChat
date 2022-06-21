@@ -85,9 +85,10 @@ class ProfileViewModel {
     private func startChat() {
         if let currentUser = User.currentUser {
             let chatId = WannaChat.startChat(user1: currentUser, user2: user)
-            print("Start chatting in chatRoomId: ", chatId)
             
-            // router?.showNewChatView()
+            router?.showNewChatView(chatRoomId: chatId,
+                                    recipientId: user.id,
+                                    recipientName: user.username)
         }
     }
 }

@@ -42,12 +42,14 @@ class ChatListRouter {
     
     // MARK: - Routes
     
-    func showChatView() {
-        DispatchQueue.main.async { [weak self] in
-//            let statusView = StatusRouter.getViewController()
-//            self?.viewController?.navigationController?.pushViewController(statusView, animated: true)
+    func showChatView(for recent: RecentChat) {
+        DispatchQueue.main.async {
+            let chatView = ChatRouter.getViewController(chatRoomId: recent.chatRoomId,
+                                                        recipientId: recent.receiverId,
+                                                        recipientName: recent.receiverName)
+            chatView.hidesBottomBarWhenPushed = true
+            self.viewController?.navigationController?.pushViewController(chatView, animated: true)
         }
-        print("Open ChatView")
     }
     
     func newChatButtonTapped() {

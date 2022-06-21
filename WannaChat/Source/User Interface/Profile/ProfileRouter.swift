@@ -40,11 +40,15 @@ class ProfileRouter {
     
     // MARK: - Routes
     
-    func showNewChatView() {
-        DispatchQueue.main.async { [weak self] in
-//            let statusView = StatusRouter.getViewController()
-//            self?.viewController?.navigationController?.pushViewController(statusView, animated: true)
+    func showNewChatView(chatRoomId: String,
+                         recipientId: String,
+                         recipientName: String) {
+        DispatchQueue.main.async {
+            let chatView = ChatRouter.getViewController(chatRoomId: chatRoomId,
+                                                        recipientId: recipientId,
+                                                        recipientName: recipientName)
+            chatView.hidesBottomBarWhenPushed = true
+            self.viewController?.navigationController?.pushViewController(chatView, animated: true)
         }
-        print("Open Chat")
     }
 }
